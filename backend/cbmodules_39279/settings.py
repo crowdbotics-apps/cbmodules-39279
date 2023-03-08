@@ -51,7 +51,7 @@ except (DefaultCredentialsError, PermissionDenied):
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env.str("SECRET_KEY")
-
+env.read_env(".env")
 ALLOWED_HOSTS = env.list("HOST", default=["*"])
 SITE_ID = 1
 
@@ -287,3 +287,9 @@ if GS_BUCKET_NAME:
     DEFAULT_FILE_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
     STATICFILES_STORAGE = "storages.backends.gcloud.GoogleCloudStorage"
     GS_DEFAULT_ACL = "publicRead"
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+SENDGRID_API_KEY = env.str("SENDGRID_API_KEY", "")
+TO_EMAILS = env.str("TO_EMAILS", "")
+STRIPE_SECRET_KEY= env.str("STRIPE_SECRET_KEY", "")
