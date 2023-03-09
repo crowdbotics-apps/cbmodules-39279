@@ -51,7 +51,7 @@ except (DefaultCredentialsError, PermissionDenied):
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = env.str("SECRET_KEY")
-env.read_env(".env")
+
 ALLOWED_HOSTS = env.list("HOST", default=["*"])
 SITE_ID = 1
 
@@ -166,7 +166,7 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
-# USE_TZ = True
+USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
