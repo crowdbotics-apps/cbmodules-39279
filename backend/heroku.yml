@@ -7,4 +7,5 @@ build:
 release:
   image: web
   command:
+    - python3 manage.py collectstatic --verbosity 2 --no-input
     - python3 manage.py migrate
