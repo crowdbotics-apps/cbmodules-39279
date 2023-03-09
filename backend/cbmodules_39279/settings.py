@@ -50,7 +50,7 @@ except (DefaultCredentialsError, PermissionDenied):
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str("SECRET_KEY")
+SECRET_KEY = env.str("SECRET_KEY", "123456")
 env.read_env(".env")
 ALLOWED_HOSTS = env.list("HOST", default=["*"])
 SITE_ID = 1
@@ -273,7 +273,7 @@ if DEBUG or not (EMAIL_HOST_USER and EMAIL_HOST_PASSWORD):
     EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 
-# GCP config 
+# GCP config
 def google_service_account_config():
     # base64 encoded service_account.json file
     service_account_config = env.str("GS_CREDENTIALS", "")
@@ -293,7 +293,15 @@ if GS_BUCKET_NAME:
     GS_DEFAULT_ACL = "publicRead"
 
 
-DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 SENDGRID_API_KEY = env.str("SENDGRID_API_KEY", "")
 TO_EMAILS = env.str("TO_EMAILS", "")
-STRIPE_SECRET_KEY= env.str("STRIPE_SECRET_KEY", "")
+STRIPE_SECRET_KEY = env.str("STRIPE_SECRET_KEY", "")
+ACCOUNT_SID = env.str("ACCOUNT_SID", '')
+AUTH_TOKEN = env.str("AUTH_TOKEN", "")
+
+EMAIL_HOST_USER = env.str("EMAIL_HOST_USER", "")
+EMAIL_HOST_PASSWORD = SENDGRID_API_KEY
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL = env.str("EMAIL", "")
+PHONE = env.str("PHONE", "")
