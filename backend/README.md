@@ -58,7 +58,7 @@ This project is set up to run using [Docker Compose](https://docs.docker.com/com
    ```
 1. Use `.env.example` to create `.env`:
    ```sh
-   $ cp .env.example .env
+   $ cp .env .env
    ```
 1. Update `.env` and `docker-compose.override.yml` replacing all `<placeholders>`
    1. Use `python -c 'from secrets import token_urlsafe; print("SECRET_KEY=" + token_urlsafe(50))'` to generate the random `SECRET_KEY`
