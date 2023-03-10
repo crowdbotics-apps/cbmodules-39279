@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0ce4f7570bfc5250585cb9ad21c83b2299fbd4983950d6405ad767f73b7d1fc7"
+            "sha256": "329d5eac581b4ba3fd1e208c7a94cd9b743446892182d5bca51b5d374559e405"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -151,19 +151,19 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:7cf46d6aa67487ae5dc43a7bd10e1ebe9b8c442c7f32f7fea259cd3df6eeb52d",
-                "sha256:b0f7e801d6d5cb96ed89e1d39326bb072b5d9175bb6c986850c77b640474d297"
+                "sha256:5374c409d0153e5da4ccde3a0f7e3efac81ce7c60e4e18ffc9acc87c67e0c0a3",
+                "sha256:f4839565feeaaca4ef775b74a8df996b79b61d988db62c90571bcc948a9f24c5"
             ],
             "index": "pypi",
-            "version": "==1.26.87"
+            "version": "==1.26.88"
         },
         "botocore": {
             "hashes": [
-                "sha256:2b981c3ebb347bdf2a8c3c0ce7e7712c76bfe43ae87d30776a3ab469e305f469",
-                "sha256:f4066e1ce1fd8790e872c70deede5d7abd94c87dcdb12892b4359245fed927f9"
+                "sha256:48ed2af0a10e7c15a3445eda62f665b106a2aba4ffa1ce730d7083022fd9596f",
+                "sha256:c320275d18ee140005ace4d04e9e720d5b1e30625cfde5267b1fc5133fd4d44d"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==1.29.87"
+            "version": "==1.29.88"
         },
         "cachetools": {
             "hashes": [
@@ -399,10 +399,10 @@
         },
         "django-allauth": {
             "hashes": [
-                "sha256:e380661ceafe55734c40102819ae720403027036f28e9f9827f0faeddc24ed5f"
+                "sha256:ca1622733b6faa591580ccd3984042f12d8c79ade93438212de249b7ffb6f91f"
             ],
             "index": "pypi",
-            "version": "==0.52.0"
+            "version": "==0.51.0"
         },
         "django-bootstrap4": {
             "hashes": [
@@ -1551,11 +1551,11 @@
         },
         "twilio": {
             "hashes": [
-                "sha256:594b2b594d2181e6f765e8af37f1d28277fa54b0f651ca7e5c0f54aa45797fd3",
-                "sha256:7dead87cf3b92fae5db07ce553b571b315a1bfff2cc6a13bdf5bdfc4675409e5"
+                "sha256:27a0f80611da27fee07a4c9436063d74a6b6612b0d543324f83ea4d050a97c08",
+                "sha256:c9ffc1d96331aedaba8fd0b7be691125057ace3e425a3c8d11b75039d788e735"
             ],
             "index": "pypi",
-            "version": "==7.16.4"
+            "version": "==7.16.5"
         },
         "typeform-python": {
             "hashes": [
