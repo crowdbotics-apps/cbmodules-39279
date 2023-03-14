@@ -8,7 +8,7 @@ class FormDefinition(models.Model):
     definition_id = models.CharField(max_length=20, unique=True)
     type = models.CharField(max_length=50)
     title = models.CharField(max_length=200)
-    choices = jsonfield.JSONField()
+    choices = jsonfield.JSONField(blank=True, null=True)
 
     def __str__(self):
         return self.title

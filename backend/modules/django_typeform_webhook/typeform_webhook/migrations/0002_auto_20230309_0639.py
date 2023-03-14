@@ -14,6 +14,6 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='formdefinition',
             name='choices',
-            field=jsonfield.fields.JSONField(),
+            field=jsonfield.fields.JSONField(blank=True, null=True),
         ),
     ]
