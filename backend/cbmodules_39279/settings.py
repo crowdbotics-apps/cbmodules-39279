@@ -90,7 +90,8 @@ THIRD_PARTY_APPS = [
     'drf_spectacular',
     'storages',
     'import_export',
-    'django_countries'
+    'django_countries',
+    'fcm_django',
 ]
 MODULES_APPS = get_modules()
 
@@ -308,3 +309,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL = env.str("EMAIL", "")
 PHONE = env.str("PHONE", "")
+FCM_DJANGO_SETTINGS = {"FCM_SERVER_KEY": env.str("FCM_SERVER_KEY", "")}
