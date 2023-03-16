@@ -62,7 +62,7 @@ class FormDefinitionView(APIView):
                 payloadFormAnswers["answer"] = str(fields["boolean"])
 
             formAnswersSerializer = FormAnswersSerializer(data=payloadFormAnswers)
-            if formAnswersSerializer.is_valid():
+            if formAnswersSerializer.is_valid(raise_exception=True):
                 formAnswersSerializer.save()
             else:
                 return Response(formAnswersSerializer.errors, status=status.HTTP_400_BAD_REQUEST)
