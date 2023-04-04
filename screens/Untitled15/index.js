@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import { Text } from "react-native";
 import { storeproducts_get_products_list } from "../../store/storeProducts/storeproducts_response_get_productlists.slice.js";
 import { useEffect } from "react";
@@ -6,6 +7,9 @@ import React from "react";
 import { StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
 const Untitled15 = () => {
+  const {
+    entities: storeproducts_response_get_products_list
+  } = useSelector(state => state.storeproducts_response_get_products_list);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(storeproducts_get_products_list());
@@ -16,7 +20,7 @@ const Untitled15 = () => {
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><Text style={styles.rmqkBToE}>{storeproducts_get_products_list.title}</Text></ScrollView>
+    }}><Text style={styles.rmqkBToE}>{storeproducts_response_get_products_list.title}</Text></ScrollView>
     </SafeAreaView>;
 };
 
