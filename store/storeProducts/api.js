@@ -1,6 +1,6 @@
 import axios from "axios"
 const storeProducts = axios.create({
-  baseURL: "https://fakestoreapi.com/products",
+  baseURL: "https://fakestoreapi.com",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function storeproducts_get_products_list(payload) {
