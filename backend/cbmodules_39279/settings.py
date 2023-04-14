@@ -92,6 +92,7 @@ THIRD_PARTY_APPS = [
     'import_export',
     'django_countries',
     'fcm_django',
+    'push_notifications'
 ]
 MODULES_APPS = get_modules()
 
