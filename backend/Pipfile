@@ -60,3 +60,7 @@ docusign-esign="3.21.0"
 mailchimp-marketing="3.0.80"
 django-push-notifications="2.0.0"
 fcm_django="0.3.4"
+google-api-python-client = "*"
+google-auth-httplib2 = "*"
+google-auth-oauthlib = "*"
+
