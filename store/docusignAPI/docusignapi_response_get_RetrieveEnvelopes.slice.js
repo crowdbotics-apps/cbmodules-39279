@@ -1,9 +1,9 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const docusignapi_get_modules_docusign_envelope_retrieve_read = createAsyncThunk(
-  "docusignapi_response_get_RetrieveEnvelopes/docusignapi_get_modules_docusign_envelope_retrieve_read",
+export const docusignapi_get_restapi_v21_accounts_accountId_envelopes_envelopeId_read = createAsyncThunk(
+  "docusignapi_response_get_RetrieveEnvelopes/docusignapi_get_restapi_v21_accounts_accountId_envelopes_envelopeId_read",
   async payload => {
-    const response = await apiService.docusignapi_get_modules_docusign_envelope_retrieve_read(
+    const response = await apiService.docusignapi_get_restapi_v21_accounts_accountId_envelopes_envelopeId_read(
       payload
     )
     return response.data
@@ -15,7 +15,7 @@ const docusignapi_response_get_RetrieveEnvelopesSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [docusignapi_get_modules_docusign_envelope_retrieve_read.pending]: (
+    [docusignapi_get_restapi_v21_accounts_accountId_envelopes_envelopeId_read.pending]: (
       state,
       action
     ) => {
@@ -23,7 +23,7 @@ const docusignapi_response_get_RetrieveEnvelopesSlice = createSlice({
         state.api.loading = "pending"
       }
     },
-    [docusignapi_get_modules_docusign_envelope_retrieve_read.fulfilled]: (
+    [docusignapi_get_restapi_v21_accounts_accountId_envelopes_envelopeId_read.fulfilled]: (
       state,
       action
     ) => {
@@ -35,7 +35,7 @@ const docusignapi_response_get_RetrieveEnvelopesSlice = createSlice({
         state.api.loading = "idle"
       }
     },
-    [docusignapi_get_modules_docusign_envelope_retrieve_read.rejected]: (
+    [docusignapi_get_restapi_v21_accounts_accountId_envelopes_envelopeId_read.rejected]: (
       state,
       action
     ) => {
@@ -47,6 +47,6 @@ const docusignapi_response_get_RetrieveEnvelopesSlice = createSlice({
   }
 })
 export default {
-  docusignapi_get_modules_docusign_envelope_retrieve_read,
+  docusignapi_get_restapi_v21_accounts_accountId_envelopes_envelopeId_read,
   slice: docusignapi_response_get_RetrieveEnvelopesSlice
 }

@@ -1,20 +1,25 @@
 import axios from "axios"
 import {} from "react-native-dotenv"
 const docusignAPI = axios.create({
-  baseURL: "https://cbmodules-39279.botics.co",
+  baseURL: "https://demo.docusign.net",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
-function docusignapi_get_modules_docusign_envelope_retrieve_read(payload) {
-  return docusignAPI.get(`/modules/docusign/envelope/retrieve/`, {
-    params: { envelope_id: payload.envelope_id }
-  })
+function docusignapi_get__restapi_v21_accounts_accountId_envelopes_list(
+  payload
+) {
+  return docusignAPI.get(
+    ` /restapi/v2.1/accounts/${payload.accountId}/envelopes`,
+    { params: { folder_ids: payload.folder_ids } }
+  )
 }
-function docusignapi_get_modules_docusign_envelope_retrieveall_read(payload) {
-  return docusignAPI.get(`/modules/docusign/envelope/retrieve-all/`, {
-    params: { folder_value: payload.folder_value }
-  })
+function docusignapi_get_restapi_v21_accounts_accountId_envelopes_envelopeId_read(
+  payload
+) {
+  return docusignAPI.get(
+    `/restapi/v2.1/accounts/${payload.accountId}/envelopes/${payload.envelopeId}`
+  )
 }
 export const apiService = {
-  docusignapi_get_modules_docusign_envelope_retrieve_read,
-  docusignapi_get_modules_docusign_envelope_retrieveall_read
+  docusignapi_get__restapi_v21_accounts_accountId_envelopes_list,
+  docusignapi_get_restapi_v21_accounts_accountId_envelopes_envelopeId_read
 }
