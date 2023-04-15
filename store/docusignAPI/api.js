@@ -1,12 +1,8 @@
 import axios from "axios"
-import { DOCUSIGN_API_TOKEN } from "react-native-dotenv"
+import {} from "react-native-dotenv"
 const docusignAPI = axios.create({
   baseURL: "https://cbmodules-39279.botics.co",
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json",
-    Authorization: `Bearer ${DOCUSIGN_API_TOKEN}`
-  }
+  headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function docusignapi_get_modules_docusign_envelope_retrieve_read(payload) {
   return docusignAPI.get(`/modules/docusign/envelope/retrieve/`, {
