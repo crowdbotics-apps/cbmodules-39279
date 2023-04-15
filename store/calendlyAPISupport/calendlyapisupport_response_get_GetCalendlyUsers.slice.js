@@ -1,24 +1,26 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const calendlyapi_get_users_me_read = createAsyncThunk(
-  "calendlyapi_response_get_GetCalendlyUsers/calendlyapi_get_users_me_read",
+export const calendlyapisupport_get_users_me_read = createAsyncThunk(
+  "calendlyapisupport_response_get_GetCalendlyUsers/calendlyapisupport_get_users_me_read",
   async payload => {
-    const response = await apiService.calendlyapi_get_users_me_read(payload)
+    const response = await apiService.calendlyapisupport_get_users_me_read(
+      payload
+    )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const calendlyapi_response_get_GetCalendlyUsersSlice = createSlice({
-  name: "calendlyapi_response_get_GetCalendlyUsers",
+const calendlyapisupport_response_get_GetCalendlyUsersSlice = createSlice({
+  name: "calendlyapisupport_response_get_GetCalendlyUsers",
   initialState,
   reducers: {},
   extraReducers: {
-    [calendlyapi_get_users_me_read.pending]: (state, action) => {
+    [calendlyapisupport_get_users_me_read.pending]: (state, action) => {
       if (state.api.loading === "idle") {
         state.api.loading = "pending"
       }
     },
-    [calendlyapi_get_users_me_read.fulfilled]: (state, action) => {
+    [calendlyapisupport_get_users_me_read.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
         state.entities = [
           ...state.entities.filter(record => record.id !== action.payload.id),
@@ -27,7 +29,7 @@ const calendlyapi_response_get_GetCalendlyUsersSlice = createSlice({
         state.api.loading = "idle"
       }
     },
-    [calendlyapi_get_users_me_read.rejected]: (state, action) => {
+    [calendlyapisupport_get_users_me_read.rejected]: (state, action) => {
       if (state.api.loading === "pending") {
         state.api.error = action.error
         state.api.loading = "idle"
@@ -36,6 +38,6 @@ const calendlyapi_response_get_GetCalendlyUsersSlice = createSlice({
   }
 })
 export default {
-  calendlyapi_get_users_me_read,
-  slice: calendlyapi_response_get_GetCalendlyUsersSlice
+  calendlyapisupport_get_users_me_read,
+  slice: calendlyapisupport_response_get_GetCalendlyUsersSlice
 }
