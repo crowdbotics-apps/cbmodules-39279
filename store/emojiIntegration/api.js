@@ -4,6 +4,8 @@ const emojiIntegration = axios.create({
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function emojiintegration_get_emojis_list(payload) {
-  return emojiIntegration.get(`/emojis`)
+  return emojiIntegration.get(`/emojis`, {
+    params: { access_key: payload.access_key }
+  })
 }
 export const apiService = { emojiintegration_get_emojis_list }
