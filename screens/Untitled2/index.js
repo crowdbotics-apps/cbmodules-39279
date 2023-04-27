@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     color: "#777777",
     position: "absolute",
-    top: 338,
+    top: 348,
     left: 192
   },
   TlCNJwkp: {
@@ -124,14 +124,25 @@ const styles = StyleSheet.create({
     left: 23
   },
   evylKEFx: {
-    width: 139,
+    width: 122,
     height: 28,
     lineHeight: 14,
     fontSize: 16,
     borderRadius: 0,
     position: "absolute",
     top: 20,
-    left: 7
+    left: 7,
+    textAlign: "center"
+  },
+  BXBSaCsD: {
+    width: 129,
+    height: 27,
+    lineHeight: 14,
+    fontSize: 18,
+    borderRadius: 0,
+    position: "absolute",
+    top: 18,
+    left: 5
   }
 })
 export default Untitled2

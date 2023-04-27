@@ -1,14 +1,16 @@
-import { zoomapi_get_users_list } from "../../store/zoomAPI/zoomapi_response_get_GetUserDetails.slice.js";
+import { FlatList } from "react-native";
+import { paypalservices_get_v1_billing_plans_plan_id_list } from "../../store/paypalServices/paypalservices_response_get_GetPlanDetails.slice.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { FlatList } from "react-native";
 import React from "react";
 import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
-const Untitled5 = () => {
+const Untitled7 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(zoomapi_get_users_list({}));
+    dispatch(paypalservices_get_v1_billing_plans_plan_id_list({
+      plan_id: "P-99K13116DM709293EMOWDTPQ"
+    }));
   }, []);
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
@@ -16,9 +18,9 @@ const Untitled5 = () => {
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><FlatList style={styles.aVvYAujN} renderItem={({
+    }}><FlatList style={styles.NpIfbOso} renderItem={({
         item
-      }) => <View style={styles.PaBNVJOC}></View>} ItemSeparatorComponent={() => <View style={styles.NWDqHMNB} />} data={[1, 2, 3]} keyExtractor={(item, index) => index}></FlatList></ScrollView>
+      }) => <View style={styles.ZzvMigNC}></View>} ItemSeparatorComponent={() => <View style={styles.LCXmllTN} />} data={[1, 2, 3]} keyExtractor={(item, index) => index}></FlatList></ScrollView>
     </SafeAreaView>;
 };
 
@@ -26,19 +28,19 @@ const styles = StyleSheet.create({
   safeArea: {
     height: '100%'
   },
-  aVvYAujN: {
+  NpIfbOso: {
     position: "absolute",
     width: 100,
     height: 150
   },
-  PaBNVJOC: {
+  ZzvMigNC: {
     width: "100%",
     height: 60,
     backgroundColor: "#FFFFFF"
   },
-  NWDqHMNB: {
+  LCXmllTN: {
     backgroundColor: "#000000",
     height: 1
   }
 });
-export default Untitled5;
+export default Untitled7;
