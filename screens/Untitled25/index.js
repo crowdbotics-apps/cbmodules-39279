@@ -11,9 +11,7 @@ const Connectors = () => {
   useEffect(() => {
     dispatch(calendlyapi_get_users_me_read({}));
   }, []);
-
-  const calendlyUser = useSelector((state) => console.log(state.Calendlyapi_response_get_GetCalendlyUsers.entities))
-
+  const calendlyUser = useSelector(state => console.log(state.Calendlyapi_response_get_GetCalendlyUsers.entities));
   return <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={{
       backgroundColor: "#f0f0f1",
