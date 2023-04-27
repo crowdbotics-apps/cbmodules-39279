@@ -8,7 +8,9 @@ import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 const Untitled11 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(gamestatsapi_get_scores_json_Games_list({}));
+    dispatch(gamestatsapi_get_scores_json_Games_list({
+      key: "f97d471b78244b348a1a5161db3c4565"
+    }));
   }, []);
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{

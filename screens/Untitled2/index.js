@@ -20,6 +20,8 @@ const Untitled2 = () => {
       padding: 10,
       position: "relative",
       flex: 1
+    }} onPress={() => {
+      navigation.navigate("Untitled11");
     }}>
         <Pressable onPress={() => {
         navigation.navigate("Untitled3");
