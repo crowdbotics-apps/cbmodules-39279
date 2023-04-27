@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
 import { View, StyleSheet, ScrollView, SafeAreaView, Text } from "react-native";
-import {PAYPAL_PLAN_ID} from "@env"
+import { PAYPAL_PLAN_ID } from "@env";
 
 const Untitled7 = () => {
   const dispatch = useDispatch();
@@ -12,11 +12,8 @@ const Untitled7 = () => {
       plan_id: PAYPAL_PLAN_ID
     }));
   }, []);
-
   const paypalData = useSelector(state => state.Paypalservices_response_get_GetPlanDetails.entities);
-
-  console.log("STATE", paypalData)
-
+  console.log("STATE", paypalData);
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
@@ -25,8 +22,8 @@ const Untitled7 = () => {
       flex: 1
     }}>
       <View>
-        <Text >NAME: {paypalData?.name}</Text>
-        <Text style={{marginVertical:10}}>DESCRIPTION: {paypalData?.description}</Text>
+        <Text>NAME: {paypalData?.name}</Text>
+        <Text style={styles.CRlTVGNX}>DESCRIPTION: {paypalData?.description}</Text>
         <Text>TAXES: {paypalData?.taxes?.percentage}%</Text>
       </View>
     </ScrollView>
@@ -50,6 +47,9 @@ const styles = StyleSheet.create({
   LCXmllTN: {
     backgroundColor: "#000000",
     height: 1
+  },
+  CRlTVGNX: {
+    marginVertical: 10
   }
 });
 export default Untitled7;

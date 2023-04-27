@@ -1,9 +1,18 @@
-import React from "react";
+import { currencyexchangeintegration_get_convert_read } from "../../store/currencyExchangeIntegration/currencyexchangeintegration_response_get_CurrencyExchangeorConverts.slice.js";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { useNavigation } from "@react-navigation/native";
 import { Text } from "react-native";
 import { View, StyleSheet, ScrollView, SafeAreaView, Pressable } from "react-native";
 
 const Untitled2 = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(currencyexchangeintegration_get_convert_read({
+      from: "EUR",
+      to: "USD"
+    }));
+  }, []);
   const navigation = useNavigation();
   return <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={{
@@ -35,7 +44,7 @@ const Untitled2 = () => {
         </Pressable>
         <Pressable style={styles.zDjDHOLr} onPress={() => {
         navigation.navigate("Untitled7");
-      }}><View ><Text style={styles.xqRNVEQa}>Paypal Serives</Text></View></Pressable>
+      }}><View><Text style={styles.xqRNVEQa}>Paypal Serives</Text></View></Pressable>
       <Pressable onPress={() => {
         navigation.navigate("Untitled8");
       }}><View style={styles.vLlCSToA}><Text style={styles.YBOlFAmI}>Odds Betting List</Text></View></Pressable><Pressable onPress={() => {
@@ -44,7 +53,9 @@ const Untitled2 = () => {
         navigation.navigate("Untitled10");
       }}><View style={styles.YpafTaMB}><Text style={styles.RwqrjrGD}>Best 365 API</Text></View></Pressable><View style={styles.NNlmBpHC}><Text style={styles.RnETViTZ}>Game Stats API</Text></View><Pressable onPress={() => {
         navigation.navigate("Untitled12");
-      }}><View style={styles.mKXkffMW}><Text style={styles.TkJYydpO}>NCAA</Text></View></Pressable></ScrollView>
+      }}><View style={styles.mKXkffMW}><Text style={styles.TkJYydpO}>NCAA</Text></View></Pressable><Pressable onPress={() => {
+        navigation.navigate("Untitled13");
+      }}><View style={styles.WnbLpxGi}><Text style={styles.RSGfNhEX}>Currency Exchange</Text></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -239,6 +250,27 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 22,
     left: 21
+  },
+  WnbLpxGi: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#d69898",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 73,
+    left: 197
+  },
+  RSGfNhEX: {
+    width: 107,
+    height: 39,
+    lineHeight: 17,
+    fontSize: 18,
+    borderRadius: 0,
+    position: "absolute",
+    top: 11,
+    left: 19,
+    textAlign: "center"
   }
 });
 export default Untitled2;
