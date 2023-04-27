@@ -1,21 +1,21 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const paypalservices_post_v1_catalogs_products_create = createAsyncThunk(
-  "paypalservices_response_post_CreateProducts/paypalservices_post_v1_catalogs_products_create",
+export const ncaaintegration_get_nfl_scores_json_Byes_list = createAsyncThunk(
+  "ncaaintegration_response_get_ByeWeekForSportsTeams/ncaaintegration_get_nfl_scores_json_Byes_list",
   async payload => {
-    const response = await apiService.paypalservices_post_v1_catalogs_products_create(
+    const response = await apiService.ncaaintegration_get_nfl_scores_json_Byes_list(
       payload
     )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const paypalservices_response_post_CreateProductsSlice = createSlice({
-  name: "paypalservices_response_post_CreateProducts",
+const ncaaintegration_response_get_ByeWeekForSportsTeamsSlice = createSlice({
+  name: "ncaaintegration_response_get_ByeWeekForSportsTeams",
   initialState,
   reducers: {},
   extraReducers: {
-    [paypalservices_post_v1_catalogs_products_create.pending]: (
+    [ncaaintegration_get_nfl_scores_json_Byes_list.pending]: (
       state,
       action
     ) => {
@@ -23,16 +23,16 @@ const paypalservices_response_post_CreateProductsSlice = createSlice({
         state.api.loading = "pending"
       }
     },
-    [paypalservices_post_v1_catalogs_products_create.fulfilled]: (
+    [ncaaintegration_get_nfl_scores_json_Byes_list.fulfilled]: (
       state,
       action
     ) => {
       if (state.api.loading === "pending") {
-        state.entities.push(action.payload)
+        state.entities = action.payload
         state.api.loading = "idle"
       }
     },
-    [paypalservices_post_v1_catalogs_products_create.rejected]: (
+    [ncaaintegration_get_nfl_scores_json_Byes_list.rejected]: (
       state,
       action
     ) => {
@@ -44,6 +44,6 @@ const paypalservices_response_post_CreateProductsSlice = createSlice({
   }
 })
 export default {
-  paypalservices_post_v1_catalogs_products_create,
-  slice: paypalservices_response_post_CreateProductsSlice
+  ncaaintegration_get_nfl_scores_json_Byes_list,
+  slice: ncaaintegration_response_get_ByeWeekForSportsTeamsSlice
 }

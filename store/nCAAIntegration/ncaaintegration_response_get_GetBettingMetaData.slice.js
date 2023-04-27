@@ -1,21 +1,21 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const oddsbetting_get_sports_americanfootball_nfl_oddshistory_read = createAsyncThunk(
-  "oddsbetting_response_get_GetHistoryOdds/oddsbetting_get_sports_americanfootball_nfl_oddshistory_read",
+export const ncaaintegration_get_nfl_odds_json_BettingMetadata_read = createAsyncThunk(
+  "ncaaintegration_response_get_GetBettingMetaData/ncaaintegration_get_nfl_odds_json_BettingMetadata_read",
   async payload => {
-    const response = await apiService.oddsbetting_get_sports_americanfootball_nfl_oddshistory_read(
+    const response = await apiService.ncaaintegration_get_nfl_odds_json_BettingMetadata_read(
       payload
     )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const oddsbetting_response_get_GetHistoryOddsSlice = createSlice({
-  name: "oddsbetting_response_get_GetHistoryOdds",
+const ncaaintegration_response_get_GetBettingMetaDataSlice = createSlice({
+  name: "ncaaintegration_response_get_GetBettingMetaData",
   initialState,
   reducers: {},
   extraReducers: {
-    [oddsbetting_get_sports_americanfootball_nfl_oddshistory_read.pending]: (
+    [ncaaintegration_get_nfl_odds_json_BettingMetadata_read.pending]: (
       state,
       action
     ) => {
@@ -23,7 +23,7 @@ const oddsbetting_response_get_GetHistoryOddsSlice = createSlice({
         state.api.loading = "pending"
       }
     },
-    [oddsbetting_get_sports_americanfootball_nfl_oddshistory_read.fulfilled]: (
+    [ncaaintegration_get_nfl_odds_json_BettingMetadata_read.fulfilled]: (
       state,
       action
     ) => {
@@ -35,7 +35,7 @@ const oddsbetting_response_get_GetHistoryOddsSlice = createSlice({
         state.api.loading = "idle"
       }
     },
-    [oddsbetting_get_sports_americanfootball_nfl_oddshistory_read.rejected]: (
+    [ncaaintegration_get_nfl_odds_json_BettingMetadata_read.rejected]: (
       state,
       action
     ) => {
@@ -47,6 +47,6 @@ const oddsbetting_response_get_GetHistoryOddsSlice = createSlice({
   }
 })
 export default {
-  oddsbetting_get_sports_americanfootball_nfl_oddshistory_read,
-  slice: oddsbetting_response_get_GetHistoryOddsSlice
+  ncaaintegration_get_nfl_odds_json_BettingMetadata_read,
+  slice: ncaaintegration_response_get_GetBettingMetaDataSlice
 }
