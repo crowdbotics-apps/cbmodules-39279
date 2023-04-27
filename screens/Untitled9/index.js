@@ -3,16 +3,14 @@ import { advertisementadbutler_get_publishers_publisherid_read } from "../../sto
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
-import { View, StyleSheet, ScrollView, SafeAreaView , Text} from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView, Text } from "react-native";
 
 const Untitled9 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(advertisementadbutler_get_publishers_publisherid_read({}));
   }, []);
-
-  const advertismentData = useSelector(state => state.Advertisementadbutler_response_get_RetrievePublishers.entities    );
-
+  const advertismentData = useSelector(state => state.Advertisementadbutler_response_get_RetrievePublishers.entities);
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
@@ -26,7 +24,7 @@ const Untitled9 = () => {
         <Text>Name: {item.name}</Text>
         <Text>Email: {item.email}</Text>
 
-      </View>} ItemSeparatorComponent={() => <View style={styles.pfyhhYXr} />} data={advertismentData&& advertismentData[0]?.data} keyExtractor={(item, index) => index}></FlatList></ScrollView>
+      </View>} ItemSeparatorComponent={() => <View style={styles.pfyhhYXr} />} data={advertismentData && advertismentData[0]?.data} keyExtractor={(item, index) => index}></FlatList></ScrollView>
     </SafeAreaView>;
 };
 
@@ -34,16 +32,14 @@ const styles = StyleSheet.create({
   safeArea: {
     height: '100%'
   },
-  znrIAgfg: {
-   
-  },
+  znrIAgfg: {},
   wilIlYob: {
     width: "100%",
     height: 60,
     backgroundColor: "#d3d3d3",
-    justifyContent:'center',
-    paddingLeft:10,
-    borderRadius:10
+    justifyContent: 'center',
+    paddingLeft: 10,
+    borderRadius: 10
   },
   pfyhhYXr: {
     backgroundColor: "#fff",

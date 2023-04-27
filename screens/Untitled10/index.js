@@ -3,7 +3,7 @@ import { best365api_get_inplay_filter_read } from "../../store/bestAPI/best365ap
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
-import { View, StyleSheet, ScrollView, SafeAreaView , Text} from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView, Text } from "react-native";
 
 const Untitled10 = () => {
   const dispatch = useDispatch();
@@ -12,9 +12,7 @@ const Untitled10 = () => {
       sport_id: 1
     }));
   }, []);
-
   const leagueData = useSelector(state => state.Best365api_response_get_Bet365InplayFilters.entities);
-
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
@@ -35,15 +33,13 @@ const styles = StyleSheet.create({
   safeArea: {
     height: '100%'
   },
-  kOcmShrH: {
-  },
+  kOcmShrH: {},
   HKNXdXUm: {
     width: "100%",
     backgroundColor: "#d3d3d3",
-    borderRadius:10,
-    paddingLeft:10,
-    paddingVertical:10
-
+    borderRadius: 10,
+    paddingLeft: 10,
+    paddingVertical: 10
   },
   bhlfKyFs: {
     backgroundColor: "#fff",

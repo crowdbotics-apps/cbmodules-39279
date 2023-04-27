@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { FlatList } from "react-native";
 import React from "react";
 import { View, StyleSheet, ScrollView, SafeAreaView, Text } from "react-native";
-import {BETTING_API_KEY} from "@env"
+import { BETTING_API_KEY } from "@env";
 
 const Untitled8 = () => {
   const dispatch = useDispatch();
@@ -13,9 +13,7 @@ const Untitled8 = () => {
       apiKey: BETTING_API_KEY
     }));
   }, []);
-
   const bettingList = useSelector(state => state.Oddsbetting_response_get_GetSports.entities);
-
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
@@ -27,10 +25,10 @@ const Untitled8 = () => {
       }) => <View style={styles.BkViCWWY}>
 
         <Text>Title: {item.title}</Text>
-        <Text style={{marginVertical:10}}>Description: {item.description}</Text>
+        <Text style={styles.oSXtrvRb}>Description: {item.description}</Text>
         <Text>Group: {item.group}</Text>
 
-      </View>} ItemSeparatorComponent={() => <View style={styles.RwAlVkIJ} />} data={bettingList[0]} keyExtractor={(item, index) => index}/></ScrollView>
+      </View>} ItemSeparatorComponent={() => <View style={styles.RwAlVkIJ} />} data={bettingList[0]} keyExtractor={(item, index) => index} /></ScrollView>
     </SafeAreaView>;
 };
 
@@ -38,18 +36,20 @@ const styles = StyleSheet.create({
   safeArea: {
     height: '100%'
   },
-  dEMvYved: {
-    // height: 150
+  dEMvYved: {// height: 150
   },
   BkViCWWY: {
     width: "100%",
     backgroundColor: "#d3d3d3",
-    paddingLeft:10,
-    paddingVertical:10
+    paddingLeft: 10,
+    paddingVertical: 10
   },
   RwAlVkIJ: {
     backgroundColor: "#fff",
     height: 5
+  },
+  oSXtrvRb: {
+    marginVertical: 10
   }
 });
 export default Untitled8;

@@ -1,92 +1,62 @@
-import React from "react"
-import { useNavigation } from "@react-navigation/native"
-import { Text } from "react-native"
-import {
-  View,
-  StyleSheet,
-  ScrollView,
-  SafeAreaView,
-  Pressable
-} from "react-native"
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { Text } from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView, Pressable } from "react-native";
 
 const Untitled2 = () => {
-  const navigation = useNavigation()
-  return (
-    <SafeAreaView style={styles.safeArea}>
-      <ScrollView
-        contentContainerStyle={{
-          backgroundColor: "#f0f0f1",
-          padding: 10,
-          position: "relative",
-          flex: 1
-        }}
-      >
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled3")
-          }}
-          style={styles.tCXIyVzF}
-        >
+  const navigation = useNavigation();
+  return <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={{
+      backgroundColor: "#f0f0f1",
+      padding: 10,
+      position: "relative",
+      flex: 1
+    }}>
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled3");
+      }} style={styles.tCXIyVzF}>
           <View>
             <Text style={styles.TlCNJwkp}>Calendly User</Text>
           </View>
         </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled4")
-          }}
-          style={styles.gFMQjapI}
-        >
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled4");
+      }} style={styles.gFMQjapI}>
           <View>
             <Text style={styles.lYmzAmST}>Emojis List</Text>
           </View>
         </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled5")
-          }}
-          style={styles.awCxvYVB}
-        >
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled5");
+      }} style={styles.awCxvYVB}>
           <View>
             <Text style={styles.evylKEFx}>Current Wheather </Text>
           </View>
         </Pressable>
-        <Pressable
-          style={styles.zDjDHOLr}
-          onPress={() => {
-            navigation.navigate("Untitled7")
-          }}
-        >
+        <Pressable style={styles.zDjDHOLr} onPress={() => {
+        navigation.navigate("Untitled7");
+      }}>
           <View>
             <Text style={styles.xqRNVEQa}>Paypal Serives</Text>
           </View>
         </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled8")
-          }}
-          style={styles.vLlCSToA}
-        >
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled8");
+      }} style={styles.vLlCSToA}>
           <View>
             <Text style={styles.YBOlFAmI}>Odds Betting List</Text>
           </View>
         </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled9")
-          }}
-          style={styles.LyQhBWiz}
-        >
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled9");
+      }} style={styles.LyQhBWiz}>
           <View>
             <Text style={styles.mYCQtHIw}>Advertisement Addbutler</Text>
           </View>
         </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled10")
-          }}
-          style={styles.YpafTaMB}
-        >
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled10");
+      }} style={styles.YpafTaMB}>
           <View>
             <Text style={styles.RwqrjrGD}>Best 365 API</Text>
           </View>
@@ -94,29 +64,24 @@ const Untitled2 = () => {
         <View style={styles.NNlmBpHC}>
           <Text style={styles.RnETViTZ}>Game Stats API</Text>
         </View>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled12")
-          }}
-        >
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled12");
+      }}>
           <View style={styles.mKXkffMW}>
             <Text style={styles.TkJYydpO}>NCAA</Text>
           </View>
         </Pressable>
 
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled13")
-          }}
-        >
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled13");
+      }}>
           <View style={styles.WnbLpxGi}>
             <Text style={styles.RSGfNhEX}>Currency Exchange</Text>
           </View>
         </Pressable>
       </ScrollView>
-    </SafeAreaView>
-  )
-}
+    </SafeAreaView>;
+};
 
 const styles = StyleSheet.create({
   safeArea: {
@@ -331,5 +296,5 @@ const styles = StyleSheet.create({
     left: 19,
     textAlign: "center"
   }
-})
-export default Untitled2
+});
+export default Untitled2;
