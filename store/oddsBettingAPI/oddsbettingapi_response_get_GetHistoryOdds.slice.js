@@ -1,21 +1,21 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const advertisementadbutler_get_publishers_publisherid_read = createAsyncThunk(
-  "advertisementadbutler_response_get_RetrievePublishers/advertisementadbutler_get_publishers_publisherid_read",
+export const oddsbettingapi_get_sports_americanfootball_nfl_oddshistory_read = createAsyncThunk(
+  "oddsbettingapi_response_get_GetHistoryOdds/oddsbettingapi_get_sports_americanfootball_nfl_oddshistory_read",
   async payload => {
-    const response = await apiService.advertisementadbutler_get_publishers_publisherid_read(
+    const response = await apiService.oddsbettingapi_get_sports_americanfootball_nfl_oddshistory_read(
       payload
     )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const advertisementadbutler_response_get_RetrievePublishersSlice = createSlice({
-  name: "advertisementadbutler_response_get_RetrievePublishers",
+const oddsbettingapi_response_get_GetHistoryOddsSlice = createSlice({
+  name: "oddsbettingapi_response_get_GetHistoryOdds",
   initialState,
   reducers: {},
   extraReducers: {
-    [advertisementadbutler_get_publishers_publisherid_read.pending]: (
+    [oddsbettingapi_get_sports_americanfootball_nfl_oddshistory_read.pending]: (
       state,
       action
     ) => {
@@ -23,7 +23,7 @@ const advertisementadbutler_response_get_RetrievePublishersSlice = createSlice({
         state.api.loading = "pending"
       }
     },
-    [advertisementadbutler_get_publishers_publisherid_read.fulfilled]: (
+    [oddsbettingapi_get_sports_americanfootball_nfl_oddshistory_read.fulfilled]: (
       state,
       action
     ) => {
@@ -35,7 +35,7 @@ const advertisementadbutler_response_get_RetrievePublishersSlice = createSlice({
         state.api.loading = "idle"
       }
     },
-    [advertisementadbutler_get_publishers_publisherid_read.rejected]: (
+    [oddsbettingapi_get_sports_americanfootball_nfl_oddshistory_read.rejected]: (
       state,
       action
     ) => {
@@ -47,6 +47,6 @@ const advertisementadbutler_response_get_RetrievePublishersSlice = createSlice({
   }
 })
 export default {
-  advertisementadbutler_get_publishers_publisherid_read,
-  slice: advertisementadbutler_response_get_RetrievePublishersSlice
+  oddsbettingapi_get_sports_americanfootball_nfl_oddshistory_read,
+  slice: oddsbettingapi_response_get_GetHistoryOddsSlice
 }

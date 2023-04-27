@@ -1,30 +1,30 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const zoomapi_get_users_list = createAsyncThunk(
-  "zoomapi_response_get_GetUserDetails/zoomapi_get_users_list",
+export const oddsbettingapi_get_scores_list = createAsyncThunk(
+  "oddsbettingapi_response_get_GetScores/oddsbettingapi_get_scores_list",
   async payload => {
-    const response = await apiService.zoomapi_get_users_list(payload)
+    const response = await apiService.oddsbettingapi_get_scores_list(payload)
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const zoomapi_response_get_GetUserDetailsSlice = createSlice({
-  name: "zoomapi_response_get_GetUserDetails",
+const oddsbettingapi_response_get_GetScoresSlice = createSlice({
+  name: "oddsbettingapi_response_get_GetScores",
   initialState,
   reducers: {},
   extraReducers: {
-    [zoomapi_get_users_list.pending]: (state, action) => {
+    [oddsbettingapi_get_scores_list.pending]: (state, action) => {
       if (state.api.loading === "idle") {
         state.api.loading = "pending"
       }
     },
-    [zoomapi_get_users_list.fulfilled]: (state, action) => {
+    [oddsbettingapi_get_scores_list.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
         state.entities = action.payload
         state.api.loading = "idle"
       }
     },
-    [zoomapi_get_users_list.rejected]: (state, action) => {
+    [oddsbettingapi_get_scores_list.rejected]: (state, action) => {
       if (state.api.loading === "pending") {
         state.api.error = action.error
         state.api.loading = "idle"
@@ -33,6 +33,6 @@ const zoomapi_response_get_GetUserDetailsSlice = createSlice({
   }
 })
 export default {
-  zoomapi_get_users_list,
-  slice: zoomapi_response_get_GetUserDetailsSlice
+  oddsbettingapi_get_scores_list,
+  slice: oddsbettingapi_response_get_GetScoresSlice
 }
