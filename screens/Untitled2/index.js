@@ -1,29 +1,65 @@
-import { useNavigation } from "@react-navigation/native";
-import { Pressable } from "react-native";
-import { Text } from "react-native";
-import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import React from "react"
+import { useNavigation } from "@react-navigation/native"
+import { Text } from "react-native"
+import {
+  View,
+  StyleSheet,
+  ScrollView,
+  SafeAreaView,
+  Pressable
+} from "react-native"
 
 const Untitled2 = () => {
-  const navigation = useNavigation();
-  return <SafeAreaView style={styles.safeArea}>
-        <ScrollView contentContainerStyle={{
-      backgroundColor: '#f0f0f1',
-      padding: 10,
-      position: 'relative',
-      flex: 1
-    }}><Pressable onPress={() => {
-        navigation.navigate("Untitled3");
-      }}><View style={styles.tCXIyVzF}><Text style={styles.TlCNJwkp}>Calendly User</Text></View></Pressable><Pressable onPress={() => {
-        navigation.navigate("Untitled4");
-      }}><View style={styles.gFMQjapI}><Text style={styles.lYmzAmST}>Emojis List</Text></View></Pressable><Pressable onPress={() => {
-        navigation.navigate("Untitled5");
-      }}><View style={styles.awCxvYVB}><Text style={styles.evylKEFx}>Current Wheather </Text></View></Pressable><View style={styles.zDjDHOLr}></View></ScrollView>
-    </SafeAreaView>;
-};
+  const navigation = useNavigation()
+  return (
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView
+        contentContainerStyle={{
+          backgroundColor: "#f0f0f1",
+          padding: 10,
+          position: "relative",
+          flex: 1
+        }}
+      >
+        <Pressable
+          onPress={() => {
+            navigation.navigate("Untitled3")
+          }}
+          style={styles.tCXIyVzF}
+        >
+          <View>
+            <Text style={styles.TlCNJwkp}>Calendly User</Text>
+          </View>
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("Untitled4")
+          }}
+          style={styles.gFMQjapI}
+        >
+          <View>
+            <Text style={styles.lYmzAmST}>Emojis List</Text>
+          </View>
+        </Pressable>
+        <Pressable
+          onPress={() => {
+            navigation.navigate("Untitled5")
+          }}
+          style={styles.awCxvYVB}
+        >
+          <View>
+            <Text style={styles.evylKEFx}>Current Wheather </Text>
+          </View>
+        </Pressable>
+        <View style={styles.zDjDHOLr}></View>
+      </ScrollView>
+    </SafeAreaView>
+  )
+}
 
 const styles = StyleSheet.create({
   safeArea: {
-    height: '100%'
+    height: "100%"
   },
   tCXIyVzF: {
     height: 60,
@@ -97,5 +133,5 @@ const styles = StyleSheet.create({
     top: 20,
     left: 7
   }
-});
-export default Untitled2;
+})
+export default Untitled2

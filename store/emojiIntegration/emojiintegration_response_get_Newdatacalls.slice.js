@@ -23,7 +23,7 @@ const emojiintegration_response_get_NewdatacallsSlice = createSlice({
     },
     [emojiintegration_get_emojis_list.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
-        state.entities = action.payload;
+        state.entities = action.payload.slice(0, 100)
         state.api.loading = "idle";
       }
     },
