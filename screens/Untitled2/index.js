@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigation } from "@react-navigation/native";
 import { Text } from "react-native";
 import { View, StyleSheet, ScrollView, SafeAreaView, Pressable } from "react-native";
@@ -34,7 +33,9 @@ const Untitled2 = () => {
           </View>
         </Pressable>
         <View style={styles.zDjDHOLr}></View>
-      </ScrollView>
+      <Pressable onPress={() => {
+        navigation.navigate("Untitled8");
+      }}><View style={styles.vLlCSToA}><Text style={styles.YBOlFAmI}>Odds Betting List</Text></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -79,8 +80,8 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     color: "#777777",
     position: "absolute",
-    top: 348,
-    left: 192
+    top: 337,
+    left: 190
   },
   TlCNJwkp: {
     width: 132,
@@ -115,15 +116,26 @@ const styles = StyleSheet.create({
     left: 7,
     textAlign: "center"
   },
-  BXBSaCsD: {
-    width: 129,
-    height: 27,
+  vLlCSToA: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#dab2b2",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 414,
+    left: 26
+  },
+  YBOlFAmI: {
+    width: 124,
+    height: 36,
     lineHeight: 14,
     fontSize: 18,
     borderRadius: 0,
     position: "absolute",
-    top: 18,
-    left: 5
+    top: 11,
+    left: 7,
+    textAlign: "center"
   }
 });
 export default Untitled2;
