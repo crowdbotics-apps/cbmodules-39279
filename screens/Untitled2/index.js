@@ -39,7 +39,9 @@ const Untitled2 = () => {
         navigation.navigate("Untitled8");
       }}><View style={styles.vLlCSToA}><Text style={styles.YBOlFAmI}>Odds Betting List</Text></View></Pressable><Pressable onPress={() => {
         navigation.navigate("Untitled9");
-      }}><View style={styles.LyQhBWiz}><Text style={styles.mYCQtHIw}>Advertisement Addbutler</Text></View></Pressable></ScrollView>
+      }}><View style={styles.LyQhBWiz}><Text style={styles.mYCQtHIw}>Advertisement Addbutler</Text></View></Pressable><Pressable onPress={() => {
+        navigation.navigate("Untitled10");
+      }}><View style={styles.YpafTaMB}><Text style={styles.RwqrjrGD}>Best 365 API</Text></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -127,8 +129,8 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     color: "#777777",
     position: "absolute",
-    top: 414,
-    left: 26
+    top: 410,
+    left: 14
   },
   YBOlFAmI: {
     width: 124,
@@ -172,6 +174,26 @@ const styles = StyleSheet.create({
     left: 11,
     textAlign: "center",
     letterSpacing: 0
+  },
+  YpafTaMB: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#d6a4a4",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 493,
+    left: 28
+  },
+  RwqrjrGD: {
+    width: 118,
+    height: 22,
+    lineHeight: 14,
+    fontSize: 18,
+    borderRadius: 0,
+    position: "absolute",
+    top: 20,
+    left: 14
   }
 });
 export default Untitled2;
