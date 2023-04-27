@@ -2,20 +2,48 @@ import { Pressable } from "react-native";
 import { Text } from "react-native";
 import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
-const Untitled25 = () => {
+const Connectors = () => {
   return <SafeAreaView style={styles.safeArea}>
-        <ScrollView contentContainerStyle={{
-      backgroundColor: '#f0f0f1',
+      <ScrollView contentContainerStyle={{
+      backgroundColor: "#f0f0f1",
       padding: 10,
-      position: 'relative',
+      position: "relative",
       flex: 1
-    }}><Pressable><View style={styles.dKFulrhG}><Pressable><Text style={styles.FRTuaXjU}>Calendly User</Text></Pressable></View></Pressable><Pressable><View style={styles.iJQsrEVr}></View></Pressable><Pressable><View style={styles.OjXMRAUa}></View></Pressable><Pressable><View style={styles.aNjbZmSK}></View></Pressable><Pressable><View style={styles.CbLMHOYx}></View></Pressable><Pressable><View style={styles.lQkOKjUO}></View></Pressable><Text style={styles.VKbXIZTl}>Connector Testing</Text></ScrollView>
+    }}>
+        <Pressable>
+          <View style={styles.dKFulrhG}>
+            <Pressable>
+              <Text style={styles.FRTuaXjU}>Calendly User</Text>
+            </Pressable>
+          </View>
+        </Pressable>
+        <Pressable>
+          <View style={styles.iJQsrEVr}>
+            <Pressable>
+              <Text style={styles.EvqtuZxp}>Emojis List</Text>
+            </Pressable>
+          </View>
+        </Pressable>
+        <Pressable>
+          <View style={styles.OjXMRAUa}></View>
+        </Pressable>
+        <Pressable>
+          <View style={styles.aNjbZmSK}></View>
+        </Pressable>
+        <Pressable>
+          <View style={styles.CbLMHOYx}></View>
+        </Pressable>
+        <Pressable>
+          <View style={styles.lQkOKjUO}></View>
+        </Pressable>
+        <Text style={styles.VKbXIZTl}>Connector Testing</Text>
+      </ScrollView>
     </SafeAreaView>;
 };
 
 const styles = StyleSheet.create({
   safeArea: {
-    height: '100%'
+    height: "100%"
   },
   dKFulrhG: {
     height: 61,
@@ -101,6 +129,17 @@ const styles = StyleSheet.create({
     top: 18,
     left: 7,
     color: "#f9f9f9"
+  },
+  EvqtuZxp: {
+    width: 100,
+    height: 22,
+    lineHeight: 14,
+    fontSize: 19,
+    borderRadius: 0,
+    position: "absolute",
+    top: 23,
+    left: 21,
+    color: "#fdfdfd"
   }
 });
-export default Untitled25;
+export default Connectors;
