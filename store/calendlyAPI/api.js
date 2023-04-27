@@ -7,14 +7,17 @@ const calendlyAPI = axios.create({
     "Content-Type": "application/json",
     Authorization: `Bearer ${CALENDLY_API_SUPPORT_TOKEN}`
   }
-})
+});
+
 function calendlyapi_get_users_me_read(payload) {
-  return calendlyAPI.get(`users/me`)
+  return calendlyAPI.get(`users/me`);
 }
+
 function calendlyapi_get_scheduled_events_list(payload) {
-  return calendlyAPI.get(`scheduled_events`)
+  return calendlyAPI.get(`scheduled_events`);
 }
+
 export const apiService = {
   calendlyapi_get_users_me_read,
   calendlyapi_get_scheduled_events_list
-}
+};

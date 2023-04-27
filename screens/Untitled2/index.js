@@ -33,15 +33,18 @@ const Untitled2 = () => {
             <Text style={styles.evylKEFx}>Current Wheather </Text>
           </View>
         </Pressable>
-
-        <Pressable onPress={() => {
+        <Pressable style={styles.zDjDHOLr} onPress={() => {
         navigation.navigate("Untitled7");
-      }} style={styles.zDjDHOLr}>
-          <View>
-            <Text style={styles.evylKEFx}>Paypal</Text>
-          </View>
-        </Pressable>
-      </ScrollView>
+      }}><View ><Text style={styles.xqRNVEQa}>Paypal Serives</Text></View></Pressable>
+      <Pressable onPress={() => {
+        navigation.navigate("Untitled8");
+      }}><View style={styles.vLlCSToA}><Text style={styles.YBOlFAmI}>Odds Betting List</Text></View></Pressable><Pressable onPress={() => {
+        navigation.navigate("Untitled9");
+      }}><View style={styles.LyQhBWiz}><Text style={styles.mYCQtHIw}>Advertisement Addbutler</Text></View></Pressable><Pressable onPress={() => {
+        navigation.navigate("Untitled10");
+      }}><View style={styles.YpafTaMB}><Text style={styles.RwqrjrGD}>Best 365 API</Text></View></Pressable><View style={styles.NNlmBpHC}><Text style={styles.RnETViTZ}>Game Stats API</Text></View><Pressable onPress={() => {
+        navigation.navigate("Untitled12");
+      }}><View style={styles.mKXkffMW}><Text style={styles.TkJYydpO}>NCAA</Text></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -86,8 +89,8 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     color: "#777777",
     position: "absolute",
-    top: 348,
-    left: 192
+    top: 328,
+    left: 183
   },
   TlCNJwkp: {
     width: 132,
@@ -122,15 +125,120 @@ const styles = StyleSheet.create({
     left: 7,
     textAlign: "center"
   },
-  BXBSaCsD: {
-    width: 129,
-    height: 27,
+  vLlCSToA: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#dab2b2",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 410,
+    left: 14
+  },
+  YBOlFAmI: {
+    width: 124,
+    height: 36,
     lineHeight: 14,
     fontSize: 18,
     borderRadius: 0,
     position: "absolute",
-    top: 18,
-    left: 5
+    top: 11,
+    left: 7,
+    textAlign: "center"
+  },
+  xqRNVEQa: {
+    width: 119,
+    height: 28,
+    lineHeight: 14,
+    fontSize: 18,
+    borderRadius: 0,
+    position: "absolute",
+    top: 16,
+    left: 13
+  },
+  LyQhBWiz: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#daadad",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 412,
+    left: 183
+  },
+  mYCQtHIw: {
+    width: 125,
+    height: 33,
+    lineHeight: 14,
+    fontSize: 18,
+    borderRadius: 0,
+    position: "absolute",
+    top: 15,
+    left: 11,
+    textAlign: "center",
+    letterSpacing: 0
+  },
+  YpafTaMB: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#d6a4a4",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 493,
+    left: 28
+  },
+  RwqrjrGD: {
+    width: 118,
+    height: 22,
+    lineHeight: 14,
+    fontSize: 18,
+    borderRadius: 0,
+    position: "absolute",
+    top: 20,
+    left: 14
+  },
+  NNlmBpHC: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#d19b9b",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 498,
+    left: 190
+  },
+  RnETViTZ: {
+    width: 126,
+    height: 28,
+    lineHeight: 14,
+    fontSize: 18,
+    borderRadius: 0,
+    textAlign: "center",
+    position: "absolute",
+    top: 16,
+    left: 7
+  },
+  mKXkffMW: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#da9b9b",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 160,
+    left: 15
+  },
+  TkJYydpO: {
+    width: 100,
+    height: 23,
+    lineHeight: 14,
+    fontSize: 28,
+    borderRadius: 0,
+    textAlign: "center",
+    position: "absolute",
+    top: 22,
+    left: 21
   }
 });
 export default Untitled2;

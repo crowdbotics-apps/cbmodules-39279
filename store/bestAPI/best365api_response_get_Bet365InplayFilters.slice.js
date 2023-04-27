@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { apiService } from "./api";
-export const calendlyapi_get_users_me_read = createAsyncThunk("calendlyapi_response_get_GetCalendlyUsers/calendlyapi_get_users_me_read", async payload => {
-  const response = await apiService.calendlyapi_get_users_me_read(payload);
+export const best365api_get_inplay_filter_read = createAsyncThunk("best365api_response_get_Bet365InplayFilters/best365api_get_inplay_filter_read", async payload => {
+  const response = await apiService.best365api_get_inplay_filter_read(payload);
   return response.data;
 });
 const initialState = {
@@ -11,23 +11,23 @@ const initialState = {
     error: null
   }
 };
-const calendlyapi_response_get_GetCalendlyUsersSlice = createSlice({
-  name: "calendlyapi_response_get_GetCalendlyUsers",
+const best365api_response_get_Bet365InplayFiltersSlice = createSlice({
+  name: "best365api_response_get_Bet365InplayFilters",
   initialState,
   reducers: {},
   extraReducers: {
-    [calendlyapi_get_users_me_read.pending]: (state, action) => {
+    [best365api_get_inplay_filter_read.pending]: (state, action) => {
       if (state.api.loading === "idle") {
         state.api.loading = "pending";
       }
     },
-    [calendlyapi_get_users_me_read.fulfilled]: (state, action) => {
+    [best365api_get_inplay_filter_read.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
         state.entities = [...state.entities.filter(record => record.id !== action.payload.id), action.payload];
         state.api.loading = "idle";
       }
     },
-    [calendlyapi_get_users_me_read.rejected]: (state, action) => {
+    [best365api_get_inplay_filter_read.rejected]: (state, action) => {
       if (state.api.loading === "pending") {
         state.api.error = action.error;
         state.api.loading = "idle";
@@ -36,6 +36,6 @@ const calendlyapi_response_get_GetCalendlyUsersSlice = createSlice({
   }
 });
 export default {
-  calendlyapi_get_users_me_read,
-  slice: calendlyapi_response_get_GetCalendlyUsersSlice
+  best365api_get_inplay_filter_read,
+  slice: best365api_response_get_Bet365InplayFiltersSlice
 };
