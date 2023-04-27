@@ -1,21 +1,21 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const oddsbetting_get_sports_americanfootball_nfl_oddshistory_read = createAsyncThunk(
-  "oddsbetting_response_get_GetHistoryOdds/oddsbetting_get_sports_americanfootball_nfl_oddshistory_read",
+export const advertisementadbutler_get_publishers_publisherid_read = createAsyncThunk(
+  "advertisementadbutler_response_get_RetrievePublishers/advertisementadbutler_get_publishers_publisherid_read",
   async payload => {
-    const response = await apiService.oddsbetting_get_sports_americanfootball_nfl_oddshistory_read(
+    const response = await apiService.advertisementadbutler_get_publishers_publisherid_read(
       payload
     )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const oddsbetting_response_get_GetHistoryOddsSlice = createSlice({
-  name: "oddsbetting_response_get_GetHistoryOdds",
+const advertisementadbutler_response_get_RetrievePublishersSlice = createSlice({
+  name: "advertisementadbutler_response_get_RetrievePublishers",
   initialState,
   reducers: {},
   extraReducers: {
-    [oddsbetting_get_sports_americanfootball_nfl_oddshistory_read.pending]: (
+    [advertisementadbutler_get_publishers_publisherid_read.pending]: (
       state,
       action
     ) => {
@@ -23,7 +23,7 @@ const oddsbetting_response_get_GetHistoryOddsSlice = createSlice({
         state.api.loading = "pending"
       }
     },
-    [oddsbetting_get_sports_americanfootball_nfl_oddshistory_read.fulfilled]: (
+    [advertisementadbutler_get_publishers_publisherid_read.fulfilled]: (
       state,
       action
     ) => {
@@ -35,7 +35,7 @@ const oddsbetting_response_get_GetHistoryOddsSlice = createSlice({
         state.api.loading = "idle"
       }
     },
-    [oddsbetting_get_sports_americanfootball_nfl_oddshistory_read.rejected]: (
+    [advertisementadbutler_get_publishers_publisherid_read.rejected]: (
       state,
       action
     ) => {
@@ -47,6 +47,6 @@ const oddsbetting_response_get_GetHistoryOddsSlice = createSlice({
   }
 })
 export default {
-  oddsbetting_get_sports_americanfootball_nfl_oddshistory_read,
-  slice: oddsbetting_response_get_GetHistoryOddsSlice
+  advertisementadbutler_get_publishers_publisherid_read,
+  slice: advertisementadbutler_response_get_RetrievePublishersSlice
 }
