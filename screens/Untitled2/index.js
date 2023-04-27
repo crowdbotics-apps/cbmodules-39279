@@ -17,7 +17,7 @@ const Untitled2 = () => {
         navigation.navigate("Untitled4");
       }}><View style={styles.gFMQjapI}><Text style={styles.lYmzAmST}>Emojis List</Text></View></Pressable><Pressable onPress={() => {
         navigation.navigate("Untitled5");
-      }}><View style={styles.awCxvYVB}><Text style={styles.evylKEFx}>Current Wheather </Text></View></Pressable><View style={styles.zDjDHOLr}></View></ScrollView>
+      }}><View style={styles.awCxvYVB}><Text style={styles.evylKEFx}>Zoom API</Text></View></Pressable><View style={styles.zDjDHOLr}></View></ScrollView>
     </SafeAreaView>;
 };
 
@@ -88,14 +88,15 @@ const styles = StyleSheet.create({
     left: 23
   },
   evylKEFx: {
-    width: 139,
+    width: 122,
     height: 28,
     lineHeight: 14,
     fontSize: 16,
     borderRadius: 0,
     position: "absolute",
     top: 20,
-    left: 7
+    left: 7,
+    textAlign: "center"
   }
 });
 export default Untitled2;
