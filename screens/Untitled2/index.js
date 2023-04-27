@@ -32,7 +32,9 @@ const Untitled2 = () => {
             <Text style={styles.evylKEFx}>Current Wheather </Text>
           </View>
         </Pressable>
-        <View style={styles.zDjDHOLr}></View>
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled7");
+      }}><View style={styles.zDjDHOLr}><Text style={styles.xqRNVEQa}>Paypal Serives</Text></View></Pressable>
       <Pressable onPress={() => {
         navigation.navigate("Untitled8");
       }}><View style={styles.vLlCSToA}><Text style={styles.YBOlFAmI}>Odds Betting List</Text></View></Pressable></ScrollView>
@@ -136,6 +138,16 @@ const styles = StyleSheet.create({
     top: 11,
     left: 7,
     textAlign: "center"
+  },
+  xqRNVEQa: {
+    width: 119,
+    height: 28,
+    lineHeight: 14,
+    fontSize: 18,
+    borderRadius: 0,
+    position: "absolute",
+    top: 16,
+    left: 13
   }
 });
 export default Untitled2;
