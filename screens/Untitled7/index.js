@@ -1,26 +1,35 @@
-import { FlatList } from "react-native";
 import { paypalservices_get_v1_billing_plans_plan_id_list } from "../../store/paypalServices/paypalservices_response_get_GetPlanDetails.slice.js";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import React from "react";
-import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView, Text } from "react-native";
+import {PAYPAL_PLAN_ID} from "@env"
 
 const Untitled7 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(paypalservices_get_v1_billing_plans_plan_id_list({
-      plan_id: "P-99K13116DM709293EMOWDTPQ"
+      plan_id: PAYPAL_PLAN_ID
     }));
   }, []);
+
+  const paypalData = useSelector(state => state.Paypalservices_response_get_GetPlanDetails.entities);
+
+  console.log("STATE", paypalData)
+
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
       padding: 10,
       position: 'relative',
       flex: 1
-    }}><FlatList style={styles.NpIfbOso} renderItem={({
-        item
-      }) => <View style={styles.ZzvMigNC}></View>} ItemSeparatorComponent={() => <View style={styles.LCXmllTN} />} data={[1, 2, 3]} keyExtractor={(item, index) => index}></FlatList></ScrollView>
+    }}>
+      <View>
+        <Text >NAME: {paypalData?.name}</Text>
+        <Text style={{marginVertical:10}}>DESCRIPTION: {paypalData?.description}</Text>
+        <Text>TAXES: {paypalData?.taxes?.percentage}%</Text>
+      </View>
+    </ScrollView>
     </SafeAreaView>;
 };
 

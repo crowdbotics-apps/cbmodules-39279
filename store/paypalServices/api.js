@@ -1,5 +1,5 @@
 import axios from "axios"
-import { PAYPAL_APIS_SERVICES_TOKEN } from "react-native-dotenv"
+import { PAYPAL_APIS_SERVICES_TOKEN } from "@env"
 const paypalServices = axios.create({
   baseURL: "https://api-m.sandbox.paypal.com",
   headers: {

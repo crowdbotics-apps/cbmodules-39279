@@ -4,12 +4,13 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
 import { View, StyleSheet, ScrollView, SafeAreaView, Text } from "react-native";
+import {EMOJI_ACCESS_KEY} from "@env"
 
 const Untitled4 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(emojiintegration_get_emojis_list({
-      access_key: "40535714ec0f182c7aa18690c809cb637e8bf523"
+      access_key: EMOJI_ACCESS_KEY
     }));
   }, []);
   const emojiList = useSelector(state => state.Emojiintegration_response_get_Newdatacalls.entities);

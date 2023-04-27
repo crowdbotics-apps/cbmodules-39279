@@ -33,7 +33,14 @@ const Untitled2 = () => {
             <Text style={styles.evylKEFx}>Current Wheather </Text>
           </View>
         </Pressable>
-        <View style={styles.zDjDHOLr}></View>
+
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled7");
+      }} style={styles.zDjDHOLr}>
+          <View>
+            <Text style={styles.evylKEFx}>Paypal</Text>
+          </View>
+        </Pressable>
       </ScrollView>
     </SafeAreaView>;
 };
