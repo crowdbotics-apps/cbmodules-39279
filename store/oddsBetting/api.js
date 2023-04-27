@@ -9,7 +9,7 @@ function oddsbetting_get_scores_list(payload) {
   })
 }
 function oddsbetting_get_sports_read(payload) {
-  return oddsBetting.get(`/sports/`, { params: { apikey: payload.apikey } })
+  return oddsBetting.get(`/sports/`, { params: { apiKey: payload.apiKey } })
 }
 function oddsbetting_get_sports_americanfootball_nfl_oddshistory_read(payload) {
   return oddsBetting.get(`/sports/americanfootball_nfl/odds-history/`, {
