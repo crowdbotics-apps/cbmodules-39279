@@ -1,9 +1,9 @@
 import axios from "axios";
-import { NCAA_APIS_NAME } from "react-native-dotenv";
+import { NCA_KEY } from "@env";
 const nCAAIntegration = axios.create({
   baseURL: "https://api.sportsdata.io/v3",
   params: {
-    key: NCAA_APIS_NAME
+    key: NCA_KEY
   },
   headers: {
     Accept: "application/json",

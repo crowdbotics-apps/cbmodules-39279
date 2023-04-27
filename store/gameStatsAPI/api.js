@@ -16,7 +16,11 @@ function gamestatsapi_get_scores_json_News_list(payload) {
 }
 
 function gamestatsapi_get_scores_json_Games_list(payload) {
-  return gameStatsAPI.get(`/scores/json/Games/`);
+  return gameStatsAPI.get(`/scores/json/Games/2015`, {
+    params: {
+      key: payload.key
+    }
+  });
 }
 
 function gamestatsapi_get_scores_json_GamesByDate_list(payload) {

@@ -1,9 +1,9 @@
 import { currencyexchangeintegration_get_convert_read } from "../../store/currencyExchangeIntegration/currencyexchangeintegration_response_get_CurrencyExchangeorConverts.slice.js";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { FlatList } from "react-native";
 import React from "react";
-import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView , Text} from "react-native";
 
 const Untitled13 = () => {
   const dispatch = useDispatch();
@@ -13,6 +13,9 @@ const Untitled13 = () => {
       to: "EUR"
     }));
   }, []);
+
+  const exchangeData = useSelector(state => state.Currencyexchangeintegration_response_get_CurrencyExchangeorConverts.entities    );
+
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
@@ -21,7 +24,13 @@ const Untitled13 = () => {
       flex: 1
     }}><FlatList style={styles.MfRnHdvL} renderItem={({
         item
-      }) => <View style={styles.HBLGQaiT}></View>} ItemSeparatorComponent={() => <View style={styles.SYFaFwRY} />} data={[1, 2, 3]} keyExtractor={(item, index) => index}></FlatList></ScrollView>
+      }) => <View style={styles.HBLGQaiT}>
+
+        <Text>From : {item.query.from}</Text>
+        <Text>To : {item.query.to}</Text>
+        <Text>Date : {item.date}</Text>
+
+      </View>} ItemSeparatorComponent={() => <View style={styles.SYFaFwRY} />} data={exchangeData} keyExtractor={(item, index) => index}></FlatList></ScrollView>
     </SafeAreaView>;
 };
 
@@ -30,14 +39,15 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   MfRnHdvL: {
-    position: "absolute",
-    width: 100,
-    height: 150
+  
   },
   HBLGQaiT: {
     width: "100%",
     height: 60,
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#d3d3d3",
+    borderRadius:10,
+    justifyContent:'center',
+    paddingLeft:10
   },
   SYFaFwRY: {
     backgroundColor: "#000000",

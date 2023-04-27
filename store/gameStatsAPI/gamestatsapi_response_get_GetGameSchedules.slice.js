@@ -23,7 +23,7 @@ const gamestatsapi_response_get_GetGameSchedulesSlice = createSlice({
     },
     [gamestatsapi_get_scores_json_Games_list.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
-        state.entities = action.payload;
+        state.entities = action.payload.slice(0,100)
         state.api.loading = "idle";
       }
     },
