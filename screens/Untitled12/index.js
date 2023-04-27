@@ -1,8 +1,17 @@
+import { ncaaintegration_get_nfl_odds_json_BettingMetadata_read } from "../../store/nCAAIntegration/ncaaintegration_response_get_GetBettingMetaData.slice.js";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { FlatList } from "react-native";
 import React from "react";
 import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
 const Untitled12 = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(ncaaintegration_get_nfl_odds_json_BettingMetadata_read({
+      key: "7f25b739792e44feaeb1532e35afdfb3"
+    }));
+  }, []);
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
