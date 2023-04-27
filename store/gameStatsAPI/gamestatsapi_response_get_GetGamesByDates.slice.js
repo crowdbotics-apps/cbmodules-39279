@@ -1,21 +1,21 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const paypalservices_post_v1_catalogs_products_create = createAsyncThunk(
-  "paypalservices_response_post_CreateProducts/paypalservices_post_v1_catalogs_products_create",
+export const gamestatsapi_get_scores_json_GamesByDate_list = createAsyncThunk(
+  "gamestatsapi_response_get_GetGamesByDates/gamestatsapi_get_scores_json_GamesByDate_list",
   async payload => {
-    const response = await apiService.paypalservices_post_v1_catalogs_products_create(
+    const response = await apiService.gamestatsapi_get_scores_json_GamesByDate_list(
       payload
     )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const paypalservices_response_post_CreateProductsSlice = createSlice({
-  name: "paypalservices_response_post_CreateProducts",
+const gamestatsapi_response_get_GetGamesByDatesSlice = createSlice({
+  name: "gamestatsapi_response_get_GetGamesByDates",
   initialState,
   reducers: {},
   extraReducers: {
-    [paypalservices_post_v1_catalogs_products_create.pending]: (
+    [gamestatsapi_get_scores_json_GamesByDate_list.pending]: (
       state,
       action
     ) => {
@@ -23,16 +23,16 @@ const paypalservices_response_post_CreateProductsSlice = createSlice({
         state.api.loading = "pending"
       }
     },
-    [paypalservices_post_v1_catalogs_products_create.fulfilled]: (
+    [gamestatsapi_get_scores_json_GamesByDate_list.fulfilled]: (
       state,
       action
     ) => {
       if (state.api.loading === "pending") {
-        state.entities.push(action.payload)
+        state.entities = action.payload
         state.api.loading = "idle"
       }
     },
-    [paypalservices_post_v1_catalogs_products_create.rejected]: (
+    [gamestatsapi_get_scores_json_GamesByDate_list.rejected]: (
       state,
       action
     ) => {
@@ -44,6 +44,6 @@ const paypalservices_response_post_CreateProductsSlice = createSlice({
   }
 })
 export default {
-  paypalservices_post_v1_catalogs_products_create,
-  slice: paypalservices_response_post_CreateProductsSlice
+  gamestatsapi_get_scores_json_GamesByDate_list,
+  slice: gamestatsapi_response_get_GetGamesByDatesSlice
 }

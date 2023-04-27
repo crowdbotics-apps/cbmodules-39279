@@ -1,32 +1,32 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const calendlyapi_get_scheduled_events_list = createAsyncThunk(
-  "calendlyapi_response_get_GetScheduledEvents/calendlyapi_get_scheduled_events_list",
+export const gamestatsapi_get_scores_json_News_list = createAsyncThunk(
+  "gamestatsapi_response_get_GetNews/gamestatsapi_get_scores_json_News_list",
   async payload => {
-    const response = await apiService.calendlyapi_get_scheduled_events_list(
+    const response = await apiService.gamestatsapi_get_scores_json_News_list(
       payload
     )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const calendlyapi_response_get_GetScheduledEventsSlice = createSlice({
-  name: "calendlyapi_response_get_GetScheduledEvents",
+const gamestatsapi_response_get_GetNewsSlice = createSlice({
+  name: "gamestatsapi_response_get_GetNews",
   initialState,
   reducers: {},
   extraReducers: {
-    [calendlyapi_get_scheduled_events_list.pending]: (state, action) => {
+    [gamestatsapi_get_scores_json_News_list.pending]: (state, action) => {
       if (state.api.loading === "idle") {
         state.api.loading = "pending"
       }
     },
-    [calendlyapi_get_scheduled_events_list.fulfilled]: (state, action) => {
+    [gamestatsapi_get_scores_json_News_list.fulfilled]: (state, action) => {
       if (state.api.loading === "pending") {
         state.entities = action.payload
         state.api.loading = "idle"
       }
     },
-    [calendlyapi_get_scheduled_events_list.rejected]: (state, action) => {
+    [gamestatsapi_get_scores_json_News_list.rejected]: (state, action) => {
       if (state.api.loading === "pending") {
         state.api.error = action.error
         state.api.loading = "idle"
@@ -35,6 +35,6 @@ const calendlyapi_response_get_GetScheduledEventsSlice = createSlice({
   }
 })
 export default {
-  calendlyapi_get_scheduled_events_list,
-  slice: calendlyapi_response_get_GetScheduledEventsSlice
+  gamestatsapi_get_scores_json_News_list,
+  slice: gamestatsapi_response_get_GetNewsSlice
 }
