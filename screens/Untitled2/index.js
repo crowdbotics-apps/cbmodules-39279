@@ -41,7 +41,9 @@ const Untitled2 = () => {
         navigation.navigate("Untitled9");
       }}><View style={styles.LyQhBWiz}><Text style={styles.mYCQtHIw}>Advertisement Addbutler</Text></View></Pressable><Pressable onPress={() => {
         navigation.navigate("Untitled10");
-      }}><View style={styles.YpafTaMB}><Text style={styles.RwqrjrGD}>Best 365 API</Text></View></Pressable><View style={styles.NNlmBpHC}><Text style={styles.RnETViTZ}>Game Stats API</Text></View></ScrollView>
+      }}><View style={styles.YpafTaMB}><Text style={styles.RwqrjrGD}>Best 365 API</Text></View></Pressable><View style={styles.NNlmBpHC}><Text style={styles.RnETViTZ}>Game Stats API</Text></View><Pressable onPress={() => {
+        navigation.navigate("Untitled12");
+      }}><View style={styles.mKXkffMW}><Text style={styles.TkJYydpO}>NCAA</Text></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -215,6 +217,27 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 16,
     left: 7
+  },
+  mKXkffMW: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#da9b9b",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 160,
+    left: 15
+  },
+  TkJYydpO: {
+    width: 100,
+    height: 23,
+    lineHeight: 14,
+    fontSize: 28,
+    borderRadius: 0,
+    textAlign: "center",
+    position: "absolute",
+    top: 22,
+    left: 21
   }
 });
 export default Untitled2;
