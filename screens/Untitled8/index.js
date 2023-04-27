@@ -9,7 +9,7 @@ const Untitled8 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(oddsbetting_get_sports_read({
-      Key: "39165d7edfb4efe631e1abd722efb282"
+      apiKey: "39165d7edfb4efe631e1abd722efb282"
     }));
   }, []);
   return <SafeAreaView style={styles.safeArea}>
