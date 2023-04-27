@@ -37,7 +37,9 @@ const Untitled2 = () => {
       }}><View style={styles.zDjDHOLr}><Text style={styles.xqRNVEQa}>Paypal Serives</Text></View></Pressable>
       <Pressable onPress={() => {
         navigation.navigate("Untitled8");
-      }}><View style={styles.vLlCSToA}><Text style={styles.YBOlFAmI}>Odds Betting List</Text></View></Pressable></ScrollView>
+      }}><View style={styles.vLlCSToA}><Text style={styles.YBOlFAmI}>Odds Betting List</Text></View></Pressable><Pressable onPress={() => {
+        navigation.navigate("Untitled9");
+      }}><View style={styles.LyQhBWiz}><Text style={styles.mYCQtHIw}>Advertisement Addbutler</Text></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -148,6 +150,28 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 16,
     left: 13
+  },
+  LyQhBWiz: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#daadad",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 419,
+    left: 193
+  },
+  mYCQtHIw: {
+    width: 125,
+    height: 33,
+    lineHeight: 14,
+    fontSize: 18,
+    borderRadius: 0,
+    position: "absolute",
+    top: 15,
+    left: 11,
+    textAlign: "center",
+    letterSpacing: 0
   }
 });
 export default Untitled2;
