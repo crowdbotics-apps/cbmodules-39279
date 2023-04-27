@@ -1,5 +1,5 @@
-import axios from "axios";
-import { SENDGRID_API_TOKEN } from "react-native-dotenv";
+import axios from "axios"
+import { SENDGRID_API_TOKEN } from "react-native-dotenv"
 const sendGridAPI = axios.create({
   baseURL: "https://api.sendgrid.com",
   headers: {
@@ -7,12 +7,8 @@ const sendGridAPI = axios.create({
     "Content-Type": "application/json",
     Authorization: `Bearer ${SENDGRID_API_TOKEN}`
   }
-});
-
+})
 function sendgridapi_post_v3_mail_send_create(payload) {
-  return sendGridAPI.post(`/v3/mail/send`, payload.data);
+  return sendGridAPI.post(`/v3/mail/send`, payload.data)
 }
-
-export const apiService = {
-  sendgridapi_post_v3_mail_send_create
-};
+export const apiService = { sendgridapi_post_v3_mail_send_create }
