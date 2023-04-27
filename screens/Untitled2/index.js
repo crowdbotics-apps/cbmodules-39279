@@ -77,7 +77,7 @@ const Untitled2 = () => {
           }}
           style={styles.LyQhBWiz}
         >
-          <View >
+          <View>
             <Text style={styles.mYCQtHIw}>Advertisement Addbutler</Text>
           </View>
         </Pressable>
@@ -87,7 +87,7 @@ const Untitled2 = () => {
           }}
           style={styles.YpafTaMB}
         >
-          <View >
+          <View>
             <Text style={styles.RwqrjrGD}>Best 365 API</Text>
           </View>
         </Pressable>
@@ -101,6 +101,16 @@ const Untitled2 = () => {
         >
           <View style={styles.mKXkffMW}>
             <Text style={styles.TkJYydpO}>NCAA</Text>
+          </View>
+        </Pressable>
+
+        <Pressable
+          onPress={() => {
+            navigation.navigate("Untitled13")
+          }}
+        >
+          <View style={styles.WnbLpxGi}>
+            <Text style={styles.RSGfNhEX}>Currency Exchange</Text>
           </View>
         </Pressable>
       </ScrollView>
@@ -154,7 +164,7 @@ const styles = StyleSheet.create({
   },
   TlCNJwkp: {
     width: 132,
-    height: 27,
+    height: 18,
     lineHeight: 10,
     fontSize: 19,
     borderRadius: 0,
@@ -177,23 +187,23 @@ const styles = StyleSheet.create({
   evylKEFx: {
     width: 122,
     height: 28,
-    lineHeight: 14,
+    lineHeight: 15,
     fontSize: 16,
     borderRadius: 0,
     position: "absolute",
-    top: 20,
+    top: 15,
     left: 7,
     textAlign: "center"
   },
   vLlCSToA: {
-    height: 60,
-    width: 140,
+    height: 52,
+    width: 135,
     backgroundColor: "#dab2b2",
     borderRadius: 40,
     color: "#777777",
     position: "absolute",
-    top: 410,
-    left: 14
+    top: 160,
+    left: 19
   },
   YBOlFAmI: {
     width: 124,
@@ -223,8 +233,8 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     color: "#777777",
     position: "absolute",
-    top: 412,
-    left: 183
+    top: 157,
+    left: 174
   },
   mYCQtHIw: {
     width: 125,
@@ -281,13 +291,13 @@ const styles = StyleSheet.create({
   },
   mKXkffMW: {
     height: 60,
-    width: 140,
+    width: 129,
     backgroundColor: "#da9b9b",
     borderRadius: 40,
     color: "#777777",
     position: "absolute",
-    top: 160,
-    left: 15
+    top: 72,
+    left: 25
   },
   TkJYydpO: {
     width: 100,
@@ -299,6 +309,27 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 22,
     left: 21
+  },
+  WnbLpxGi: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#d69898",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 76,
+    left: 173
+  },
+  RSGfNhEX: {
+    width: 107,
+    height: 39,
+    lineHeight: 17,
+    fontSize: 18,
+    borderRadius: 0,
+    position: "absolute",
+    top: 11,
+    left: 19,
+    textAlign: "center"
   }
 })
 export default Untitled2

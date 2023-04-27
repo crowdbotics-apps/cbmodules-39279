@@ -19,7 +19,7 @@ function oddsbetting_get_scores_list(payload) {
 function oddsbetting_get_sports_read(payload) {
   return oddsBetting.get(`/sports/`, {
     params: {
-      apiKey: payload.apiKey
+      apikey: payload.apikey
     }
   }).catch(err => console.log(err.response))
 }

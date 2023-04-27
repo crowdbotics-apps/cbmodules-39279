@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import React from "react";
 import { View, StyleSheet, ScrollView, SafeAreaView, Text } from "react-native";
-import {EMOJI_ACCESS_KEY} from "@env"
+import { EMOJI_ACCESS_KEY } from "@env";
 
 const Untitled4 = () => {
   const dispatch = useDispatch();

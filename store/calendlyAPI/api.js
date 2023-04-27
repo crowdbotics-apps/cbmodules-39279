@@ -1,5 +1,5 @@
-import axios from "axios"
-import { CALENDLY_API_SUPPORT_TOKEN } from "@env"
+import axios from "axios";
+import { CALENDLY_API_SUPPORT_TOKEN } from "react-native-dotenv";
 const calendlyAPI = axios.create({
   baseURL: "https://api.calendly.com/",
   headers: {
