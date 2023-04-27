@@ -1,9 +1,16 @@
+import { calendlyapi_get_users_me_read } from "../../store/calendlyAPI/calendlyapi_response_get_GetCalendlyUsers.slice.js";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import React from "react";
 import { Pressable } from "react-native";
 import { Text } from "react-native";
 import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
 
 const Connectors = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(calendlyapi_get_users_me_read({}));
+  }, []);
   return <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={{
       backgroundColor: "#f0f0f1",
