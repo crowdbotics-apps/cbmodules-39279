@@ -17,7 +17,9 @@ const Untitled2 = () => {
         navigation.navigate("Untitled4");
       }}><View style={styles.gFMQjapI}><Text style={styles.lYmzAmST}>Emojis List</Text></View></Pressable><Pressable onPress={() => {
         navigation.navigate("Untitled5");
-      }}><View style={styles.awCxvYVB}><Text style={styles.evylKEFx}>Zoom API</Text></View></Pressable><View style={styles.zDjDHOLr}></View></ScrollView>
+      }}><View style={styles.awCxvYVB}><Text style={styles.evylKEFx}>Zoom API</Text></View></Pressable><Pressable onPress={() => {
+        navigation.navigate("Untitled7");
+      }}><View style={styles.zDjDHOLr}><Text style={styles.BXBSaCsD}>Paypal Services</Text></View></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -62,7 +64,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     color: "#777777",
     position: "absolute",
-    top: 338,
+    top: 348,
     left: 192
   },
   TlCNJwkp: {
@@ -97,6 +99,16 @@ const styles = StyleSheet.create({
     top: 20,
     left: 7,
     textAlign: "center"
+  },
+  BXBSaCsD: {
+    width: 129,
+    height: 27,
+    lineHeight: 14,
+    fontSize: 18,
+    borderRadius: 0,
+    position: "absolute",
+    top: 18,
+    left: 5
   }
 });
 export default Untitled2;
