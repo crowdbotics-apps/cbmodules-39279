@@ -1,6 +1,6 @@
 import { calendlyapi_get_users_me_read } from "../../store/calendlyAPI/calendlyapi_response_get_GetCalendlyUsers.slice.js";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import React from "react";
 import { Pressable } from "react-native";
 import { Text } from "react-native";
@@ -11,6 +11,9 @@ const Connectors = () => {
   useEffect(() => {
     dispatch(calendlyapi_get_users_me_read({}));
   }, []);
+
+  const calendlyUser = useSelector((state) => console.log(state.Calendlyapi_response_get_GetCalendlyUsers.entities))
+
   return <SafeAreaView style={styles.safeArea}>
       <ScrollView contentContainerStyle={{
       backgroundColor: "#f0f0f1",
