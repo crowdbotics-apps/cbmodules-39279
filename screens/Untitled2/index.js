@@ -1,61 +1,42 @@
-import React from "react"
-import { useNavigation } from "@react-navigation/native"
-import { Text } from "react-native"
-import {
-  View,
-  StyleSheet,
-  ScrollView,
-  SafeAreaView,
-  Pressable
-} from "react-native"
+import React from "react";
+import { useNavigation } from "@react-navigation/native";
+import { Text } from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView, Pressable } from "react-native";
 
 const Untitled2 = () => {
-  const navigation = useNavigation()
-  return (
-    <SafeAreaView style={styles.safeArea}>
-      <ScrollView
-        contentContainerStyle={{
-          backgroundColor: "#f0f0f1",
-          padding: 10,
-          position: "relative",
-          flex: 1
-        }}
-      >
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled3")
-          }}
-          style={styles.tCXIyVzF}
-        >
+  const navigation = useNavigation();
+  return <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={{
+      backgroundColor: "#f0f0f1",
+      padding: 10,
+      position: "relative",
+      flex: 1
+    }}>
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled3");
+      }} style={styles.tCXIyVzF}>
           <View>
             <Text style={styles.TlCNJwkp}>Calendly User</Text>
           </View>
         </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled4")
-          }}
-          style={styles.gFMQjapI}
-        >
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled4");
+      }} style={styles.gFMQjapI}>
           <View>
             <Text style={styles.lYmzAmST}>Emojis List</Text>
           </View>
         </Pressable>
-        <Pressable
-          onPress={() => {
-            navigation.navigate("Untitled5")
-          }}
-          style={styles.awCxvYVB}
-        >
+        <Pressable onPress={() => {
+        navigation.navigate("Untitled5");
+      }} style={styles.awCxvYVB}>
           <View>
             <Text style={styles.evylKEFx}>Current Wheather </Text>
           </View>
         </Pressable>
         <View style={styles.zDjDHOLr}></View>
       </ScrollView>
-    </SafeAreaView>
-  )
-}
+    </SafeAreaView>;
+};
 
 const styles = StyleSheet.create({
   safeArea: {
@@ -144,5 +125,5 @@ const styles = StyleSheet.create({
     top: 18,
     left: 5
   }
-})
-export default Untitled2
+});
+export default Untitled2;
