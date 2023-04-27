@@ -41,7 +41,7 @@ const Untitled2 = () => {
         navigation.navigate("Untitled9");
       }}><View style={styles.LyQhBWiz}><Text style={styles.mYCQtHIw}>Advertisement Addbutler</Text></View></Pressable><Pressable onPress={() => {
         navigation.navigate("Untitled10");
-      }}><View style={styles.YpafTaMB}><Text style={styles.RwqrjrGD}>Best 365 API</Text></View></Pressable></ScrollView>
+      }}><View style={styles.YpafTaMB}><Text style={styles.RwqrjrGD}>Best 365 API</Text></View></Pressable><View style={styles.NNlmBpHC}><Text style={styles.RnETViTZ}>Game Stats API</Text></View></ScrollView>
     </SafeAreaView>;
 };
 
@@ -86,8 +86,8 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     color: "#777777",
     position: "absolute",
-    top: 337,
-    left: 190
+    top: 328,
+    left: 183
   },
   TlCNJwkp: {
     width: 132,
@@ -160,8 +160,8 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     color: "#777777",
     position: "absolute",
-    top: 419,
-    left: 193
+    top: 412,
+    left: 183
   },
   mYCQtHIw: {
     width: 125,
@@ -194,6 +194,27 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 20,
     left: 14
+  },
+  NNlmBpHC: {
+    height: 60,
+    width: 140,
+    backgroundColor: "#d19b9b",
+    borderRadius: 40,
+    color: "#777777",
+    position: "absolute",
+    top: 498,
+    left: 190
+  },
+  RnETViTZ: {
+    width: 126,
+    height: 28,
+    lineHeight: 14,
+    fontSize: 18,
+    borderRadius: 0,
+    textAlign: "center",
+    position: "absolute",
+    top: 16,
+    left: 7
   }
 });
 export default Untitled2;
