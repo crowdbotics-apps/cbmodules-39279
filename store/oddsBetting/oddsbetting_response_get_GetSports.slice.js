@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { apiService } from "./api";
-export const oddsbetting_get_sports_read = createAsyncThunk("oddsbetting_response_get_GetSports/oddsbetting_get_sports_read", async payload => {
+export const oddsbetting_get_sports_read = createAsyncThunk("oddsbetting_response_get_GetSports/oddsbetting_get_sports_read", async payload => { 
   const response = await apiService.oddsbetting_get_sports_read(payload);
   return response.data;
 });

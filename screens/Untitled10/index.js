@@ -1,9 +1,9 @@
 import { FlatList } from "react-native";
 import { best365api_get_inplay_filter_read } from "../../store/bestAPI/best365api_response_get_Bet365InplayFilters.slice.js";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import React from "react";
-import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView , Text} from "react-native";
 
 const Untitled10 = () => {
   const dispatch = useDispatch();
@@ -12,6 +12,9 @@ const Untitled10 = () => {
       sport_id: 1
     }));
   }, []);
+
+  const leagueData = useSelector(state => state.Best365api_response_get_Bet365InplayFilters.entities);
+
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
@@ -20,7 +23,11 @@ const Untitled10 = () => {
       flex: 1
     }}><FlatList style={styles.kOcmShrH} renderItem={({
         item
-      }) => <View style={styles.HKNXdXUm}></View>} ItemSeparatorComponent={() => <View style={styles.bhlfKyFs} />} data={[1, 2, 3]} keyExtractor={(item, index) => index}></FlatList></ScrollView>
+      }) => <View style={styles.HKNXdXUm}>
+        <Text>League: {item?.league?.name}</Text>
+        <Text>Home: {item?.home?.name}</Text>
+        <Text>Away: {item?.away?.name}</Text>
+      </View>} ItemSeparatorComponent={() => <View style={styles.bhlfKyFs} />} data={leagueData && leagueData[0]?.results} keyExtractor={(item, index) => index}></FlatList></ScrollView>
     </SafeAreaView>;
 };
 
@@ -29,18 +36,18 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   kOcmShrH: {
-    position: "absolute",
-    width: 100,
-    height: 150
   },
   HKNXdXUm: {
     width: "100%",
-    height: 60,
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#d3d3d3",
+    borderRadius:10,
+    paddingLeft:10,
+    paddingVertical:10
+
   },
   bhlfKyFs: {
-    backgroundColor: "#000000",
-    height: 1
+    backgroundColor: "#fff",
+    height: 2
   }
 });
 export default Untitled10;

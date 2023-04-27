@@ -19,9 +19,9 @@ function oddsbetting_get_scores_list(payload) {
 function oddsbetting_get_sports_read(payload) {
   return oddsBetting.get(`/sports/`, {
     params: {
-      apikey: payload.apikey
+      apiKey: payload.apiKey
     }
-  });
+  }).catch(err => console.log(err.response))
 }
 
 function oddsbetting_get_sports_americanfootball_nfl_oddshistory_read(payload) {

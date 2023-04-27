@@ -1,17 +1,21 @@
 import { oddsbetting_get_sports_read } from "../../store/oddsBetting/oddsbetting_response_get_GetSports.slice.js";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { FlatList } from "react-native";
 import React from "react";
-import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView, Text } from "react-native";
+import {BETTING_API_KEY} from "@env"
 
 const Untitled8 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(oddsbetting_get_sports_read({
-      apiKey: "39165d7edfb4efe631e1abd722efb282"
+      apiKey: BETTING_API_KEY
     }));
   }, []);
+
+  const bettingList = useSelector(state => state.Oddsbetting_response_get_GetSports.entities);
+
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
@@ -20,7 +24,13 @@ const Untitled8 = () => {
       flex: 1
     }}><FlatList style={styles.dEMvYved} renderItem={({
         item
-      }) => <View style={styles.BkViCWWY}></View>} ItemSeparatorComponent={() => <View style={styles.RwAlVkIJ} />} data={[1, 2, 3]} keyExtractor={(item, index) => index}></FlatList></ScrollView>
+      }) => <View style={styles.BkViCWWY}>
+
+        <Text>Title: {item.title}</Text>
+        <Text style={{marginVertical:10}}>Description: {item.description}</Text>
+        <Text>Group: {item.group}</Text>
+
+      </View>} ItemSeparatorComponent={() => <View style={styles.RwAlVkIJ} />} data={bettingList[0]} keyExtractor={(item, index) => index}/></ScrollView>
     </SafeAreaView>;
 };
 
@@ -29,18 +39,17 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   dEMvYved: {
-    position: "absolute",
-    width: 100,
-    height: 150
+    // height: 150
   },
   BkViCWWY: {
     width: "100%",
-    height: 60,
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#d3d3d3",
+    paddingLeft:10,
+    paddingVertical:10
   },
   RwAlVkIJ: {
-    backgroundColor: "#000000",
-    height: 1
+    backgroundColor: "#fff",
+    height: 5
   }
 });
 export default Untitled8;

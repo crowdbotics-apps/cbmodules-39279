@@ -15,8 +15,6 @@ const Untitled7 = () => {
 
   const paypalData = useSelector(state => state.Paypalservices_response_get_GetPlanDetails.entities);
 
-  console.log("STATE", paypalData)
-
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',

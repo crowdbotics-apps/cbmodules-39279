@@ -1,11 +1,11 @@
 import axios from "axios";
-import { BEST_365_API_INTEGRATION_TOKEN } from "react-native-dotenv";
+import { BEST_365_API_INTEGRATION_TOKEN } from "@env";
 const bestAPI = axios.create({
   baseURL: "https://betsapi2.p.rapidapi.com/v1/bet365",
   headers: {
     Accept: "application/json",
     "Content-Type": "application/json",
-    Authorization: `Bearer ${BEST_365_API_INTEGRATION_TOKEN}`
+    "X-RapidAPI-Key ": `${BEST_365_API_INTEGRATION_TOKEN}`
   }
 });
 

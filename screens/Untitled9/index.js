@@ -1,15 +1,18 @@
 import { FlatList } from "react-native";
 import { advertisementadbutler_get_publishers_publisherid_read } from "../../store/advertisementAdButler/advertisementadbutler_response_get_RetrievePublishers.slice.js";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import React from "react";
-import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView , Text} from "react-native";
 
 const Untitled9 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(advertisementadbutler_get_publishers_publisherid_read({}));
   }, []);
+
+  const advertismentData = useSelector(state => state.Advertisementadbutler_response_get_RetrievePublishers.entities    );
+
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
@@ -18,7 +21,12 @@ const Untitled9 = () => {
       flex: 1
     }}><FlatList style={styles.znrIAgfg} renderItem={({
         item
-      }) => <View style={styles.wilIlYob}></View>} ItemSeparatorComponent={() => <View style={styles.pfyhhYXr} />} data={[1, 2, 3]} keyExtractor={(item, index) => index}></FlatList></ScrollView>
+      }) => <View style={styles.wilIlYob}>
+
+        <Text>Name: {item.name}</Text>
+        <Text>Email: {item.email}</Text>
+
+      </View>} ItemSeparatorComponent={() => <View style={styles.pfyhhYXr} />} data={advertismentData&& advertismentData[0]?.data} keyExtractor={(item, index) => index}></FlatList></ScrollView>
     </SafeAreaView>;
 };
 
@@ -27,18 +35,19 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   znrIAgfg: {
-    position: "absolute",
-    width: 100,
-    height: 150
+   
   },
   wilIlYob: {
     width: "100%",
     height: 60,
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#d3d3d3",
+    justifyContent:'center',
+    paddingLeft:10,
+    borderRadius:10
   },
   pfyhhYXr: {
-    backgroundColor: "#000000",
-    height: 1
+    backgroundColor: "#fff",
+    height: 2
   }
 });
 export default Untitled9;
