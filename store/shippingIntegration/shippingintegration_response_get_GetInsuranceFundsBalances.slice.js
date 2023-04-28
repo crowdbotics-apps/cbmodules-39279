@@ -1,22 +1,22 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit"
 import { apiService } from "./api"
-export const currencyexchangeintegration_get_convert_read = createAsyncThunk(
-  "currencyexchangeintegration_response_get_CurrencyExchangeorConverts/currencyexchangeintegration_get_convert_read",
+export const shippingintegration_get_insurance_shipsurance_balance_read = createAsyncThunk(
+  "shippingintegration_response_get_GetInsuranceFundsBalances/shippingintegration_get_insurance_shipsurance_balance_read",
   async payload => {
-    const response = await apiService.currencyexchangeintegration_get_convert_read(
+    const response = await apiService.shippingintegration_get_insurance_shipsurance_balance_read(
       payload
     )
     return response.data
   }
 )
 const initialState = { entities: [], api: { loading: "idle", error: null } }
-const currencyexchangeintegration_response_get_CurrencyExchangeorConvertsSlice = createSlice(
+const shippingintegration_response_get_GetInsuranceFundsBalancesSlice = createSlice(
   {
-    name: "currencyexchangeintegration_response_get_CurrencyExchangeorConverts",
+    name: "shippingintegration_response_get_GetInsuranceFundsBalances",
     initialState,
     reducers: {},
     extraReducers: {
-      [currencyexchangeintegration_get_convert_read.pending]: (
+      [shippingintegration_get_insurance_shipsurance_balance_read.pending]: (
         state,
         action
       ) => {
@@ -24,7 +24,7 @@ const currencyexchangeintegration_response_get_CurrencyExchangeorConvertsSlice =
           state.api.loading = "pending"
         }
       },
-      [currencyexchangeintegration_get_convert_read.fulfilled]: (
+      [shippingintegration_get_insurance_shipsurance_balance_read.fulfilled]: (
         state,
         action
       ) => {
@@ -36,7 +36,7 @@ const currencyexchangeintegration_response_get_CurrencyExchangeorConvertsSlice =
           state.api.loading = "idle"
         }
       },
-      [currencyexchangeintegration_get_convert_read.rejected]: (
+      [shippingintegration_get_insurance_shipsurance_balance_read.rejected]: (
         state,
         action
       ) => {
@@ -49,6 +49,6 @@ const currencyexchangeintegration_response_get_CurrencyExchangeorConvertsSlice =
   }
 )
 export default {
-  currencyexchangeintegration_get_convert_read,
-  slice: currencyexchangeintegration_response_get_CurrencyExchangeorConvertsSlice
+  shippingintegration_get_insurance_shipsurance_balance_read,
+  slice: shippingintegration_response_get_GetInsuranceFundsBalancesSlice
 }
