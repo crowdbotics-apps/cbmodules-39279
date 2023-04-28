@@ -1,15 +1,18 @@
 import { zoomapi_get_users_list } from "../../store/zoomAPI/zoomapi_response_get_GetUserDetails.slice.js";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { FlatList } from "react-native";
 import React from "react";
-import { View, StyleSheet, ScrollView, SafeAreaView } from "react-native";
+import { View, StyleSheet, ScrollView, SafeAreaView, Text } from "react-native";
 
 const Untitled5 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(zoomapi_get_users_list({}));
   }, []);
+
+  const zoomList = useSelector(state => state.Zoomapi_response_get_GetUserDetails.entities);
+
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
       backgroundColor: '#f0f0f1',
@@ -18,7 +21,17 @@ const Untitled5 = () => {
       flex: 1
     }}><FlatList style={styles.aVvYAujN} renderItem={({
         item
-      }) => <View style={styles.PaBNVJOC}></View>} ItemSeparatorComponent={() => <View style={styles.NWDqHMNB} />} data={[1, 2, 3]} keyExtractor={(item, index) => index}></FlatList></ScrollView>
+      }) => <View style={styles.PaBNVJOC}>
+        <Text>
+          Name: {item?.display_name}
+        </Text>
+        <Text>
+          Email: {item?.email}
+        </Text>
+        <Text>
+          Status: {item?.status}
+        </Text>
+      </View>} ItemSeparatorComponent={() => <View style={styles.NWDqHMNB} />} data={zoomList && zoomList?.users} keyExtractor={(item, index) => index}></FlatList></ScrollView>
     </SafeAreaView>;
 };
 
@@ -27,18 +40,19 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   aVvYAujN: {
-    position: "absolute",
-    width: 100,
-    height: 150
+
   },
   PaBNVJOC: {
     width: "100%",
-    height: 60,
-    backgroundColor: "#FFFFFF"
+    backgroundColor: "#d3d3d3",
+    justifyContent: "center",
+    borderRadius:10,
+    paddingLeft:10,
+    paddingVertical:10
   },
   NWDqHMNB: {
-    backgroundColor: "#000000",
-    height: 1
+    backgroundColor: "#fff",
+    height: 2
   }
 });
 export default Untitled5;

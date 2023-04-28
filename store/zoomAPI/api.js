@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ZOOM_APIS_SERVICES_TOKEN } from "react-native-dotenv";
+import { ZOOM_APIS_SERVICES_TOKEN } from "@env";
 const zoomAPI = axios.create({
   baseURL: "https://api.zoom.us/v2",
   headers: {

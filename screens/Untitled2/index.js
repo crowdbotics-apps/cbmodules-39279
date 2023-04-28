@@ -21,7 +21,7 @@ const Untitled2 = () => {
           flex: 1
         }}
       >
-        {/* <Pressable
+        <Pressable
           onPress={() => {
             navigation.navigate("Untitled3")
           }}
@@ -30,7 +30,7 @@ const Untitled2 = () => {
           <View>
             <Text style={styles.TlCNJwkp}>Calendly User</Text>
           </View>
-        </Pressable> */}
+        </Pressable>
         <Pressable
           onPress={() => {
             navigation.navigate("Untitled4")
@@ -41,17 +41,17 @@ const Untitled2 = () => {
             <Text style={styles.lYmzAmST}>Emojis List</Text>
           </View>
         </Pressable>
-        {/* <Pressable
+        <Pressable
           onPress={() => {
             navigation.navigate("Untitled5")
           }}
           style={styles.awCxvYVB}
         >
           <View>
-            <Text style={styles.evylKEFx}>Current Wheather </Text>
+            <Text style={styles.evylKEFx}>Zoom list </Text>
           </View>
-        </Pressable> */}
-        {/* <Pressable
+        </Pressable>
+        <Pressable
           style={styles.zDjDHOLr}
           onPress={() => {
             navigation.navigate("Untitled7")
@@ -60,7 +60,7 @@ const Untitled2 = () => {
           <View>
             <Text style={styles.xqRNVEQa}>Paypal Serives</Text>
           </View>
-        </Pressable> */}
+        </Pressable>
         <Pressable
           onPress={() => {
             navigation.navigate("Untitled8")
@@ -71,7 +71,7 @@ const Untitled2 = () => {
             <Text style={styles.YBOlFAmI}>Odds Betting List</Text>
           </View>
         </Pressable>
-        {/* <Pressable
+        <Pressable
           onPress={() => {
             navigation.navigate("Untitled9")
           }}
@@ -80,7 +80,7 @@ const Untitled2 = () => {
           <View>
             <Text style={styles.mYCQtHIw}>Advertisement Addbutler</Text>
           </View>
-        </Pressable> */}
+        </Pressable>
         <Pressable
           onPress={() => {
             navigation.navigate("Untitled10")
