@@ -12,6 +12,8 @@
     "web:build": "./node_modules/.bin/webpack --config ./webpack.config.js --color --mode production"
   },
   "dependencies": {
+    "@modules/app-menu": "file:./modules/app-menu/",
+    "@modules/blackbaud": "file:./modules/blackbaud",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.9.3",
     "@react-navigation/stack": "^5.14.3",
@@ -34,7 +36,8 @@
     "react-native-vector-icons": "^8.1.0",
     "react-native-web": "^0.18.2",
     "react-redux": "^7.2.2",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "react-native-webview": "^11.17.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
