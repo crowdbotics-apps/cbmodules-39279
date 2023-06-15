@@ -1,3 +1,4 @@
+import { openaiapi_get_v1_models_model_read } from "../../store/openAIAPI/openaiapi_response_get_RetrieveModels.slice.js";
 import { openaiapi_get_v1_models_list } from "../../store/openAIAPI/openaiapi_response_get_Listmodels.slice.js";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
@@ -8,6 +9,7 @@ const Untitled1 = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(openaiapi_get_v1_models_list());
+    dispatch(openaiapi_get_v1_models_model_read());
   }, []);
   return <SafeAreaView style={styles.safeArea}>
         <ScrollView contentContainerStyle={{
